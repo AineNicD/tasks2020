@@ -4,8 +4,23 @@ My GMIT Fundamentals of Data Analysis tasks
 ## Introduction
 This repository contains four tasks in a single jupyter notebook given in the Fundementals of Data Analysis module in Gmit HDip data analytics. 
 
-## Task 1 : October 5th, 2020:
+### [Jupyter Notebook](https://jupyter.org/)
+-is an open-source web application that allows you to create and share documents that contain live code, equations, visualizations and narrative text. It is best installed with [Anaconda](https://www.anaconda.com/). 
+Anaconda simplifies package management and deployment by having the most popular python packages installed on your machine even before you know you will be using them. 
+Jupyter can also be installed separately from its website.
 
+### Launching Jupyter Notebook App
+The Jupyter Notebook App can be launched by clicking on the Jupyter Notebook icon installed by Anaconda in the start menu or by typing 'Jupyter Notebook' in a terminal.
+### How do run/save this jupyter notebook
+- First click on Raw.
+- Then, press ctrl+s to save it as tasks2020.ipynb (files from GitHub are saved as text files as default, so you'll have to manually type '. ipynb' after the file name to make this work.)
+- Open CMDER and type in Jupyter Notebook
+- Jupyter notebook should appear in your browser 
+- Go to the file location where you saved the tasks2020.ipynb
+- Open file.
+-[Jupyter beginners Guide](https://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/execute.html)
+
+## Task 1 : October 5th, 2020:
 ~~~ 
 "Write a Python function called counts that takes a list as
 input and returns a dictionary of unique items in the list as keys and the number of
@@ -19,19 +34,15 @@ first and include a description with references of your algorithm in the noteboo
 ### Tasks 2020: [tasks2020.ipynb](https://github.com/AineNicD/tasks2020/blob/main/tasks2020.ipynb)
 
 
-## Technologies 
-
-* [Jupyter](https://jupyter.org/) The Jupyter Notebook is an open-source web application that allows you to create and share documents that contain live code, equations, visualizations and narrative text.
-
-* [Visual Studio Code](https://code.visualstudio.com/), a free source-code editor which is great for editing and working on code. 
-
-* [Anaconda](https://www.anaconda.com/distribution/), a free and open-source distribution of the Python programming language.
-Anaconda is popular because it brings many of the tools used in data science and machine learning with just one install, so it's great for having short and simple setup. It has all the libraries needed to write and implement the programs in these tasks. 
-
 
 ### References
+
 * Ian McLoughlin course material 
 
 * [Python library](https://docs.python.org/3/library/functions.html)
 
 * [Python community](https://www.python.org/community/).
+
+* [Jupyter Notebook](https://jupyter.org/)
+
+
