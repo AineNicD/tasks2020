@@ -41,7 +41,7 @@ calling the function as diceroll(k=2, n=1000) should return a dictionary like:
 {2:19,3:50,4:82,5:112,6:135,7:174,8:133,9:114,10:75,11:70,12:36}
 - Tasks 2020 by Ian McLoughlin
 ~~~
- ## 3. November 16th, 2020: 
+ ## Task 3. November 16th, 2020: 
  ~~~
 "The numpy.random.binomial function can be used to
 simulate flipping a coin with a 50/50 chance of heads or tails. Interestingly, if a
@@ -58,7 +58,7 @@ code."
 - Tasks 2020 by Ian McLoughlin
 ~~~
 
-## 4. November 30th, 2020:
+## Task 4.  November 30th, 2020:
 ~~~
 "Simpson’s paradox is a well-known statistical paradox
 where a trend evident in a number of groups reverses when the groups are combined
@@ -71,7 +71,7 @@ Simpson’s paradox for inspiration."
 - Tasks 2020 by Ian McLoughlin
 ~~~
 
-Tasks are answered in the note book below; 
+Tasks are answered in the jupyter notebook below; 
 ### Tasks 2020: [tasks2020.ipynb](https://github.com/AineNicD/tasks2020/blob/main/tasks2020.ipynb)
 
 
