@@ -58,6 +58,20 @@ code."
 - Tasks 2020 by Ian McLoughlin
 ~~~
 
+## 4. November 30th, 2020:
+~~~
+"Simpson’s paradox is a well-known statistical paradox
+where a trend evident in a number of groups reverses when the groups are combined
+into one big data set. Use numpy to create four data sets, each with an x array
+and a corresponding y array, to demonstrate Simpson’s paradox. You might
+create your x arrays using numpy.linspace and create the y array for each
+x using notation like y = a * x + b where you choose the a and b for each
+x , y pair to demonstrate the paradox. You might see the Wikipedia page for
+Simpson’s paradox for inspiration."
+- Tasks 2020 by Ian McLoughlin
+~~~
+
+Tasks are answered in the note book below; 
 ### Tasks 2020: [tasks2020.ipynb](https://github.com/AineNicD/tasks2020/blob/main/tasks2020.ipynb)
 
 
