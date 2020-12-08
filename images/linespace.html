@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="pingback" href="https://www.sharpsightlabs.com/xmlrpc.php" />
+
+	<script type="text/javascript">
+		document.documentElement.className = 'js';
+	</script>
+
+	
+	<!-- This site is optimized with the Yoast SEO plugin v15.4 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>How to use the NumPy linspace function - Sharp Sight</title><style id="rocket-critical-css">:root{--wp-admin-theme-color:#007cba;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-20:#005a87}a,body,div,form,h1,h2,html,img,li,p,span,strong,ul{margin:0;padding:0;border:0;outline:0;font-size:100%;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;vertical-align:baseline;background:transparent}body{line-height:1}ul{list-style:none}:focus{outline:0}article,header,nav{display:block}body{font-family:Open Sans,Arial,sans-serif;font-size:14px;color:#666;background-color:#fff;line-height:1.7em;font-weight:500;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}body.et_cover_background{background-size:cover!important;background-position:top!important;background-repeat:no-repeat!important;background-attachment:fixed}a{color:#2ea3f2}a{text-decoration:none}p{padding-bottom:1em}p:not(.has-background):last-of-type{padding-bottom:0}strong{font-weight:700}h1,h2{color:#333;padding-bottom:10px;line-height:1em;font-weight:500}h3 a{color:inherit}h1{font-size:30px}h2{font-size:26px}input{-webkit-appearance:none}button,input{font-family:inherit}img{max-width:100%;height:auto}#top-menu li{word-wrap:break-word}.mobile_menu_bar:after,.mobile_menu_bar:before{color:#2ea3f2}.et-search-form{border-color:#2ea3f2}#main-content{background-color:#fff}.container{width:80%;max-width:1080px;margin:auto}body:not(.et-tb) #main-content .container,body:not(.et-tb-has-header) #main-content .container{padding-top:58px}#left-area ul,.entry-content ul{list-style-type:disc;padding:0 0 23px 1em;line-height:26px}.container{text-align:left;position:relative}#main-header{line-height:23px;font-weight:500;top:0;background-color:#fff;width:100%;box-shadow:0 1px 0 rgba(0,0,0,.1);-moz-box-shadow:0 1px 0 rgba(0,0,0,.1);-webkit-box-shadow:0 1px 0 rgba(0,0,0,.1);position:relative;z-index:99999}.et_fixed_nav.et_show_nav #page-container{padding-top:80px}.et_fixed_nav #main-header{position:fixed}.et_header_style_left #et-top-navigation{padding-top:33px}.et_header_style_left #et-top-navigation nav>ul>li>a{padding-bottom:33px}.et_header_style_left .logo_container{position:absolute;height:100%;width:100%}.et_header_style_left #et-top-navigation .mobile_menu_bar{padding-bottom:24px}#logo{margin-bottom:0;max-height:54%;display:inline-block;float:none;vertical-align:middle;-webkit-transform:translateZ(0)}span.logo_helper{display:inline-block;height:100%;vertical-align:middle;width:0}.et-social-icon span{display:none}#top-menu,#top-menu-nav{line-height:0}#et-top-navigation{font-weight:600}#top-menu,nav#top-menu-nav{float:left}#top-menu li{display:inline-block;font-size:14px;padding-right:22px}#top-menu>li:last-child{padding-right:0}#top-menu a{color:rgba(0,0,0,.6);text-decoration:none;display:block;position:relative}.et-search-form{top:0;bottom:0;right:0;position:absolute;z-index:1000;width:100%}.et-search-form input{width:90%;border:none;color:#333;position:absolute;top:0;bottom:0;right:30px;margin:auto;background:transparent}.et-search-form .et-search-field::-ms-clear{width:0;height:0;display:none}.et_search_form_container{animation:none;-o-animation:none;-webkit-animation:none;-moz-animation:none}.container.et_search_form_container{position:relative;opacity:0;height:1px}span.et_close_search_field{display:block;width:30px;height:30px;z-index:99999;position:absolute;right:0;top:0;bottom:0;margin:auto}span.et_close_search_field:after{font-family:ETmodules;content:"\4d";speak:none;font-weight:400;-webkit-font-feature-settings:normal;font-feature-settings:normal;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;font-size:32px;display:inline-block;-webkit-box-sizing:border-box;box-sizing:border-box}.container.et_menu_container{z-index:99}.et_search_outer{width:100%;overflow:hidden;position:absolute;top:0}form.et-search-form{background:transparent!important}input[type=search]::-webkit-search-cancel-button{-webkit-appearance:none}#left-area .post-meta{font-size:14px;padding-bottom:15px}#left-area .post-meta a{text-decoration:none;color:#666}.single .post{padding-bottom:25px}.single .et_pb_post{margin-bottom:27px}#et-top-navigation{float:right}#et_mobile_nav_menu{float:right;display:none}.mobile_menu_bar:before{content:"\61";font-size:32px;left:0;position:relative;top:0}#sidebar{padding-bottom:28px}#sidebar .et_pb_widget{margin-bottom:30px;width:100%;float:none}@media (min-width:981px){#sidebar{float:left;width:20.875%}#left-area{width:79.125%;padding-bottom:23px}#main-content .container:before{content:"";position:absolute;top:0;height:100%;width:1px;background-color:#e2e2e2}.et_right_sidebar #left-area{float:left;padding-right:5.5%}.et_right_sidebar #sidebar{padding-left:30px}.et_right_sidebar #main-content .container:before{right:20.875%!important}}@media (min-width:981px) and (max-width:1100px){#sidebar .et_pb_widget{margin-left:0}}@media (max-width:980px){#page-container,.et_fixed_nav.et_show_nav #page-container{padding-top:80px}#left-area,#sidebar{width:100%!important}.et_right_sidebar #left-area,.et_right_sidebar #sidebar{width:auto;float:none;padding-right:0;padding-left:0}.et_right_sidebar #left-area{margin-right:0}.et_right_sidebar #sidebar{margin-left:0;border-left:none}#main-content .container:before{display:none!important}#top-menu{display:none}#et-top-navigation{margin-right:0}.et_fixed_nav #main-header{position:absolute}.et_header_style_left #et-top-navigation{padding-top:24px;display:block}.et_header_style_left #logo{max-width:50%}.et_header_style_left .et-search-form{width:50%!important;max-width:50%!important}#et_mobile_nav_menu{display:block}}@media (max-width:767px){#et-top-navigation{margin-right:0}}@media (max-width:479px){#et-top-navigation{margin-right:0}}@font-face{font-family:ETmodules;font-display:swap;src:url(https://vrzkj25a871bpq7t1ugcgmn9-wpengine.netdna-ssl.com/wp-content/themes/Divi/core/admin/fonts/modules.eot);src:url(https://vrzkj25a871bpq7t1ugcgmn9-wpengine.netdna-ssl.com/wp-content/themes/Divi/core/admin/fonts/modules.eot?#iefix) format("embedded-opentype"),url(https://vrzkj25a871bpq7t1ugcgmn9-wpengine.netdna-ssl.com/wp-content/themes/Divi/core/admin/fonts/modules.ttf) format("truetype"),url(https://vrzkj25a871bpq7t1ugcgmn9-wpengine.netdna-ssl.com/wp-content/themes/Divi/core/admin/fonts/modules.woff) format("woff"),url(https://vrzkj25a871bpq7t1ugcgmn9-wpengine.netdna-ssl.com/wp-content/themes/Divi/core/admin/fonts/modules.svg#ETmodules) format("svg");font-weight:400;font-style:normal}*{-webkit-box-sizing:border-box;box-sizing:border-box}.mobile_menu_bar:before{font-family:ETmodules!important;speak:none;font-style:normal;font-weight:400;-webkit-font-feature-settings:normal;font-feature-settings:normal;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-shadow:0 0}.nav li{position:relative;line-height:1em}.mobile_menu_bar{position:relative;display:block;line-height:0}.mobile_menu_bar:before{content:"\61";font-size:32px;position:relative;left:0;top:0}.mobile_nav .select_page{display:none}.et_pb_widget{float:left;max-width:100%}.et_pb_post,.et_pb_widget{word-wrap:break-word}.et_pb_post{margin-bottom:60px}.et_pb_post .post-meta{font-size:14px;margin-bottom:6px}.et_pb_post .post-meta a{text-decoration:none}.et_pb_post .entry-content{padding-top:30px}@media (min-width:981px) and (max-width:1100px){.et_pb_post{margin-bottom:42px}}@media (max-width:980px){.et_pb_post{margin-bottom:42px}}@media (max-width:767px){.et_pb_post{margin-bottom:42px}}@media (max-width:479px){.et_pb_post{margin-bottom:42px}.et_pb_post .post-meta{color:#666;font-size:14px}}.clearfix:after{visibility:hidden;display:block;font-size:0;content:" ";clear:both;height:0}button::-moz-focus-inner{padding:0;border:0}.et_bloom .et_bloom_optin div,.et_bloom .et_bloom_optin span,.et_bloom .et_bloom_optin h2,.et_bloom .et_bloom_optin p{text-transform:none;font-weight:normal;margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background-image:none;-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.et_bloom .et_bloom_optin button{background:none}@font-face{font-family:'ET-Bloom';src:url(https://vrzkj25a871bpq7t1ugcgmn9-wpengine.netdna-ssl.com/wp-content/plugins/bloom/css/fonts/ET-Bloom.eot?gd6mr8);src:url(https://vrzkj25a871bpq7t1ugcgmn9-wpengine.netdna-ssl.com/wp-content/plugins/bloom/css/fonts/ET-Bloom.eot?#iefixgd6mr8) format('embedded-opentype'),url(https://vrzkj25a871bpq7t1ugcgmn9-wpengine.netdna-ssl.com/wp-content/plugins/bloom/css/fonts/ET-Bloom.woff?gd6mr8) format('woff'),url(https://vrzkj25a871bpq7t1ugcgmn9-wpengine.netdna-ssl.com/wp-content/plugins/bloom/css/fonts/ET-Bloom.ttf?gd6mr8) format('truetype'),url(https://vrzkj25a871bpq7t1ugcgmn9-wpengine.netdna-ssl.com/wp-content/plugins/bloom/css/fonts/ET-Bloom.svg?gd6mr8#ETdashboard) format('svg');font-weight:normal;font-style:normal}.et_bloom button.et_bloom_submit_subscription{position:relative}.et_bloom .et_bloom_subscribe_loader{display:none; background:url(https://cdn.shortpixel.ai/spai/q_lossy+ret_img/https://vrzkj25a871bpq7t1ugcgmn9-wpengine.netdna-ssl.com/wp-content/plugins/bloom/images/subscribe-loader.gif)!important;width:16px;height:16px;position:absolute;left:50%;top:50%;margin:-8px auto auto -8px!important}.et_bloom .et_bloom_1_field p.et_bloom_popup_input{width:68%}.et_bloom .et_bloom_bottom_stacked p.et_bloom_popup_input{width:100%;margin-bottom:10px;padding-right:0}.et_bloom .et_bloom_bottom_stacked button.et_bloom_submit_subscription{width:100%}.et_bloom .et_bloom_header_text_light h2{color:#fff!important}.et_bloom .et_bloom_header_text_light p{color:rgba(255,255,255,0.7)!important}.et_bloom .et_bloom_header_outer{height:auto}.et_bloom .et_bloom_form_container_wrapper{position:relative}.et_bloom .et_bloom_widget_content span.et_bloom_close_button{display:none}.et_bloom .et_bloom_widget_content .et_bloom_form_container{box-shadow:none!important;-webkit-box-shadow:none!important;-moz-box-shadow:none!important;width:auto;max-width:100%;z-index:99}.et_bloom .et_bloom_form_container,.et_bloom .et_bloom_form_container div,.et_bloom .et_bloom_form_container span,.et_bloom .et_bloom_form_container h2,.et_bloom .et_bloom_form_container p{font-family:'Open Sans',helvetica,arial,sans-serif;line-height:1em;text-transform:none;font-weight:normal;margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background-image:none;-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.et_bloom .et_bloom_form_container .clearfix:after{visibility:hidden;display:block;font-size:0;content:" ";clear:both;height:0}.et_bloom .et_bloom_form_container{position:relative}.et_bloom .et_bloom_form_container .et_bloom_close_button{font-family:'ET-Bloom';speak:none;font-style:normal;font-weight:normal;font-variant:normal;text-transform:none;line-height:1;font-size:16px!important;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.et_bloom .et_bloom_success_container{height:0;overflow:hidden;opacity:0;position:relative;margin:0 auto!important;z-index:-1}.et_bloom .et_bloom_form_container h2.et_bloom_success_message{line-height:1.4em;position:relative;font-size:14px;display:none;opacity:0;z-index:-1;text-align:center;color:#888;background:#fff;padding:10px 10%;width:80%;max-width:300px;border-radius:5px;margin:auto}.et_bloom h2.et_bloom_success_message:after{content:'';position:absolute;left:50%;top:-5px;margin-left:-3px;width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent;border-bottom:5px solid #fff}.et_bloom .et_bloom_close_button:before{content:"\e60d";position:absolute;top:7px;right:7px}.et_bloom .et_bloom_form_container .et_bloom_close_button{position:absolute;top:-10px;right:-10px;width:30px;height:30px;-webkit-border-radius:30px;-moz-border-radius:30px;border-radius:30px;background-color:#fff;-webkit-box-shadow:0px 2px 4px 0px rgba(0,0,0,0.34);-moz-box-shadow:0px 2px 4px 0px rgba(0,0,0,0.34);box-shadow:0px 2px 4px 0px rgba(0,0,0,0.34)}.et_bloom .et_bloom_form_container{background-color:#dadfe4;max-width:640px;z-index:999999999;-webkit-box-shadow:0px 0px 60px rgba(0,0,0,0.2);-moz-box-shadow:0px 0px 60px rgba(0,0,0,0.2);box-shadow:0px 0px 60px rgba(0,0,0,0.2);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.et_bloom .et_bloom_form_container,.et_bloom .et_bloom_form_container div,.et_bloom .et_bloom_form_container .et_bloom_popup_input,.et_bloom .et_bloom_form_container input{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}.et_bloom .et_bloom_form_container .et_bloom_form_header{background-color:#fff;padding:15px;overflow:hidden;position:relative}.et_bloom .et_bloom_form_container .et_bloom_form_text{max-width:100%;padding:15px;display:table-cell}.et_bloom .et_bloom_form_header h2{font-size:24px!important;padding-bottom:0!important;font-weight:600!important;line-height:1.1em!important;color:rgba(0,0,0,0.8);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.et_bloom .et_bloom_form_header p{color:rgba(0,0,0,0.5);line-height:1.6em;font-size:14px;margin-top:0.5em}.et_bloom .et_bloom_form_container .et_bloom_form_content{padding:40px 30px;color:rgba(0,0,0,0.5);width:100%;background-color:#E9E9E9;position:relative}.et_bloom .et_bloom_form_container .et_bloom_form_content input{display:block}.et_bloom .et_bloom_form_container .et_bloom_form_content span{color:#444;font-weight:700!important;margin-bottom:10px!important}.et_bloom .et_bloom_form_container .et_bloom_form_content input{background-color:#fff;width:100%;font-weight:600;color:rgba(0,0,0,0.5);-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;border:none}.et_bloom .et_bloom_form_container .et_bloom_form_content input{padding:14px!important}.et_bloom .et_bloom_form_container .et_bloom_form_content .et_bloom_popup_input input{padding:10px!important}.et_bloom .et_bloom_popup_input input::-webkit-input-placeholder{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.et_bloom .et_bloom_popup_input input:-moz-placeholder{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.et_bloom .et_bloom_popup_input input::-moz-placeholder{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.et_bloom .et_bloom_popup_input input:-ms-input-placeholder{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.et_bloom .et_bloom_form_content .et_bloom_popup_input{float:left;width:34%;padding-right:20px}.et_bloom .et_bloom_form_content button{width:32%;background-color:#46C8C8;color:#FFF;font-weight:600;text-transform:uppercase;letter-spacing:1px;border:none}.et_bloom .et_bloom_form_content input,.et_bloom .et_bloom_form_content button{padding:10px;font-family:'Open Sans',sans-serif;font-size:14px}.et_bloom .et_bloom_button_text{color:#FFF!important;font-weight:600!important;text-transform:uppercase;letter-spacing:1px;margin-bottom:0!important}.et_bloom .et_bloom_widget_content .et_bloom_form_container .et_bloom_form_content{padding:30px 20px}.et_bloom .et_bloom_form_header .et_bloom_form_text{max-width:100%;padding:15px;display:block;clear:both}.et_bloom .et_bloom_widget_content .et_bloom_form_header{padding:15px 5px!important}.et_bloom_form_container .et_bloom_form_content .et_bloom_fields{height:100%}@media only screen and (max-width:767px){.et_bloom .et_bloom_form_content{clear:both}}@media screen and (max-width:640px){.et_bloom .et_bloom_form_container .et_bloom_popup_input{padding-right:0!important}.et_bloom .et_bloom_form_container .et_bloom_form_header,.et_bloom .et_bloom_form_container .et_bloom_popup_input,.et_bloom .et_bloom_form_container button{width:100%!important;max-width:100%!important;float:left!important}}@media screen and (max-width:479px){.et_bloom .et_bloom_form_container_wrapper{flex-direction:column}.et_bloom .et_bloom_form_text{text-align:center}}</style><link rel="preload" href="https://fonts.googleapis.com/css?family=Montserrat%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2Cregular%2Citalic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CPoppins%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2Cregular%2Citalic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CUbuntu%3A400%2C300%2C300italic%2C400italic%2C500%2C500italic%2C700%2C700italic%7COpen%20Sans%3A400%2C700&#038;subset=latin%2Clatin-ext,latin%2Ccyrillic-ext%2Ccyrillic%2Cgreek-ext%2Cgreek%2Clatin-ext&#038;display=swap" data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" /><link rel="preload" href="https://vrzkj25a871bpq7t1ugcgmn9-wpengine.netdna-ssl.com/wp-content/cache/min/1/5466843acacbd73a0071ea38c19c32c2.css" data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" media="all" data-minify="1" />
+	<meta name="description" content="This tutorial will show you how to use the NumPy linspace function. It will explain the syntax and show you a few step-by-step-examples." />
+	<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+	<link rel="canonical" href="https://www.sharpsightlabs.com/blog/numpy-linspace/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="How to use the NumPy linspace function" />
+	<meta property="og:description" content="This tutorial post will explain how to use the NumPy linspace function. It will explain the syntax step by step, and show you concrete examples of how to use it." />
+	<meta property="og:url" content="https://www.sharpsightlabs.com/blog/numpy-linspace/" />
+	<meta property="og:site_name" content="Sharp Sight" />
+	<meta property="article:published_time" content="2018-10-15T20:00:56+00:00" />
+	<meta property="article:modified_time" content="2020-11-08T02:39:50+00:00" />
+	<meta property="og:image" content="https://vrzkj25a871bpq7t1ugcgmn9-wpengine.netdna-ssl.com/wp-content/uploads/2018/10/visual-representation-of-np-linspace-0-100-5.png" />
+	<meta property="og:image:width" content="1204" />
+	<meta property="og:image:height" content="818" />
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:title" content="How to use the NumPy linspace function" />
+	<meta name="twitter:description" content="This tutorial post will explain how to use the NumPy linspace function. It will explain the syntax step by step, and show you concrete examples of how to use it." />
+	<meta name="twitter:image" content="https://vrzkj25a871bpq7t1ugcgmn9-wpengine.netdna-ssl.com/wp-content/uploads/2018/10/visual-representation-of-np-linspace-0-100-5.png" />
+	<meta name="twitter:creator" content="@Josh_Ebner" />
+	<meta name="twitter:label1" content="Written by">
+	<meta name="twitter:data1" content="Joshua Ebner">
+	<meta name="twitter:label2" content="Est. reading time">
+	<meta name="twitter:data2" content="7 minutes">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://www.sharpsightlabs.com/#website","url":"https://www.sharpsightlabs.com/","name":"Sharp Sight","description":"","potentialAction":[{"@type":"SearchAction","target":"https://www.sharpsightlabs.com/?s={search_term_string}","query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"ImageObject","@id":"https://www.sharpsightlabs.com/blog/numpy-linspace/#primaryimage","inLanguage":"en-US","url":"https://vrzkj25a871bpq7t1ugcgmn9-wpengine.netdna-ssl.com/wp-content/uploads/2018/10/visual-representation-of-np-linspace-0-100-5.png","width":1204,"height":818,"caption":"A visual representation of the output of np.arange(start = 0, stop = 100, num = 5)."},{"@type":"WebPage","@id":"https://www.sharpsightlabs.com/blog/numpy-linspace/#webpage","url":"https://www.sharpsightlabs.com/blog/numpy-linspace/","name":"How to use the NumPy linspace function - Sharp Sight","isPartOf":{"@id":"https://www.sharpsightlabs.com/#website"},"primaryImageOfPage":{"@id":"https://www.sharpsightlabs.com/blog/numpy-linspace/#primaryimage"},"datePublished":"2018-10-15T20:00:56+00:00","dateModified":"2020-11-08T02:39:50+00:00","author":{"@id":"https://www.sharpsightlabs.com/#/schema/person/d79b250e3b08678ede0c15a286c98cdf"},"description":"This tutorial will show you how to use the NumPy linspace function. It will explain the syntax and show you a few step-by-step-examples.","inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://www.sharpsightlabs.com/blog/numpy-linspace/"]}]},{"@type":"Person","@id":"https://www.sharpsightlabs.com/#/schema/person/d79b250e3b08678ede0c15a286c98cdf","name":"Joshua Ebner","sameAs":["https://twitter.com/@Josh_Ebner"]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//a.omappapi.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link href='https://fonts.gstatic.com' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="Sharp Sight &raquo; Feed" href="https://www.sharpsightlabs.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Sharp Sight &raquo; Comments Feed" href="https://www.sharpsightlabs.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Sharp Sight &raquo; How to use the NumPy linspace function Comments Feed" href="https://www.sharpsightlabs.com/blog/numpy-linspace/feed/" />
+<!-- This site uses the Google Analytics by MonsterInsights plugin v7.13.2 - Using Analytics tracking - https://www.monsterinsights.com/ -->
+<script data-rocketlazyloadscript='data:text/javascript;base64,CiAgICAod2luZG93LmdhRGV2SWRzPXdpbmRvdy5nYURldklkc3x8W10pLnB1c2goImRaR0l6WkciKTsKCXZhciBtaV92ZXJzaW9uICAgICAgICAgPSAnNy4xMy4yJzsKCXZhciBtaV90cmFja191c2VyICAgICAgPSB0cnVlOwoJdmFyIG1pX25vX3RyYWNrX3JlYXNvbiA9ICcnOwoJCgl2YXIgZGlzYWJsZVN0ciA9ICdnYS1kaXNhYmxlLVVBLTU0NDQwNTkwLTEnOwoKCS8qIEZ1bmN0aW9uIHRvIGRldGVjdCBvcHRlZCBvdXQgdXNlcnMgKi8KCWZ1bmN0aW9uIF9fZ2FUcmFja2VySXNPcHRlZE91dCgpIHsKCQlyZXR1cm4gZG9jdW1lbnQuY29va2llLmluZGV4T2YoZGlzYWJsZVN0ciArICc9dHJ1ZScpID4gLTE7Cgl9CgoJLyogRGlzYWJsZSB0cmFja2luZyBpZiB0aGUgb3B0LW91dCBjb29raWUgZXhpc3RzLiAqLwoJaWYgKCBfX2dhVHJhY2tlcklzT3B0ZWRPdXQoKSApIHsKCQl3aW5kb3dbZGlzYWJsZVN0cl0gPSB0cnVlOwoJfQoKCS8qIE9wdC1vdXQgZnVuY3Rpb24gKi8KCWZ1bmN0aW9uIF9fZ2FUcmFja2VyT3B0b3V0KCkgewoJICBkb2N1bWVudC5jb29raWUgPSBkaXNhYmxlU3RyICsgJz10cnVlOyBleHBpcmVzPVRodSwgMzEgRGVjIDIwOTkgMjM6NTk6NTkgVVRDOyBwYXRoPS8nOwoJICB3aW5kb3dbZGlzYWJsZVN0cl0gPSB0cnVlOwoJfQoKCWlmICggJ3VuZGVmaW5lZCcgPT09IHR5cGVvZiBnYU9wdG91dCApIHsKCQlmdW5jdGlvbiBnYU9wdG91dCgpIHsKCQkJX19nYVRyYWNrZXJPcHRvdXQoKTsKCQl9Cgl9CgkKCWlmICggbWlfdHJhY2tfdXNlciApIHsKCQkoZnVuY3Rpb24oaSxzLG8sZyxyLGEsbSl7aVsnR29vZ2xlQW5hbHl0aWNzT2JqZWN0J109cjtpW3JdPWlbcl18fGZ1bmN0aW9uKCl7CgkJCShpW3JdLnE9aVtyXS5xfHxbXSkucHVzaChhcmd1bWVudHMpfSxpW3JdLmw9MSpuZXcgRGF0ZSgpO2E9cy5jcmVhdGVFbGVtZW50KG8pLAoJCQltPXMuZ2V0RWxlbWVudHNCeVRhZ05hbWUobylbMF07YS5hc3luYz0xO2Euc3JjPWc7bS5wYXJlbnROb2RlLmluc2VydEJlZm9yZShhLG0pCgkJfSkod2luZG93LGRvY3VtZW50LCdzY3JpcHQnLCcvL3d3dy5nb29nbGUtYW5hbHl0aWNzLmNvbS9hbmFseXRpY3MuanMnLCdfX2dhVHJhY2tlcicpOwoKCQlfX2dhVHJhY2tlcignY3JlYXRlJywgJ1VBLTU0NDQwNTkwLTEnLCAnYXV0bycpOwoJCV9fZ2FUcmFja2VyKCdzZXQnLCAnZm9yY2VTU0wnLCB0cnVlKTsKCQlfX2dhVHJhY2tlcigncmVxdWlyZScsICdkaXNwbGF5ZmVhdHVyZXMnKTsKCQlfX2dhVHJhY2tlcignc2VuZCcsJ3BhZ2V2aWV3Jyk7Cgl9IGVsc2UgewoJCWNvbnNvbGUubG9nKCAiIiApOwoJCShmdW5jdGlvbigpIHsKCQkJLyogaHR0cHM6Ly9kZXZlbG9wZXJzLmdvb2dsZS5jb20vYW5hbHl0aWNzL2Rldmd1aWRlcy9jb2xsZWN0aW9uL2FuYWx5dGljc2pzLyAqLwoJCQl2YXIgbm9vcGZuID0gZnVuY3Rpb24oKSB7CgkJCQlyZXR1cm4gbnVsbDsKCQkJfTsKCQkJdmFyIG5vb3BudWxsZm4gPSBmdW5jdGlvbigpIHsKCQkJCXJldHVybiBudWxsOwoJCQl9OwoJCQl2YXIgVHJhY2tlciA9IGZ1bmN0aW9uKCkgewoJCQkJcmV0dXJuIG51bGw7CgkJCX07CgkJCXZhciBwID0gVHJhY2tlci5wcm90b3R5cGU7CgkJCXAuZ2V0ID0gbm9vcGZuOwoJCQlwLnNldCA9IG5vb3BmbjsKCQkJcC5zZW5kID0gbm9vcGZuOwoJCQl2YXIgX19nYVRyYWNrZXIgPSBmdW5jdGlvbigpIHsKCQkJCXZhciBsZW4gPSBhcmd1bWVudHMubGVuZ3RoOwoJCQkJaWYgKCBsZW4gPT09IDAgKSB7CgkJCQkJcmV0dXJuOwoJCQkJfQoJCQkJdmFyIGYgPSBhcmd1bWVudHNbbGVuLTFdOwoJCQkJaWYgKCB0eXBlb2YgZiAhPT0gJ29iamVjdCcgfHwgZiA9PT0gbnVsbCB8fCB0eXBlb2YgZi5oaXRDYWxsYmFjayAhPT0gJ2Z1bmN0aW9uJyApIHsKCQkJCQljb25zb2xlLmxvZyggJ05vdCBydW5uaW5nIGZ1bmN0aW9uIF9fZ2FUcmFja2VyKCcgKyBhcmd1bWVudHNbMF0gKyAiIC4uLi4pIGJlY2F1c2UgeW91IGFyZSBub3QgYmVpbmcgdHJhY2tlZC4gIiArIG1pX25vX3RyYWNrX3JlYXNvbiApOwoJCQkJCXJldHVybjsKCQkJCX0KCQkJCXRyeSB7CgkJCQkJZi5oaXRDYWxsYmFjaygpOwoJCQkJfSBjYXRjaCAoZXgpIHsKCgkJCQl9CgkJCX07CgkJCV9fZ2FUcmFja2VyLmNyZWF0ZSA9IGZ1bmN0aW9uKCkgewoJCQkJcmV0dXJuIG5ldyBUcmFja2VyKCk7CgkJCX07CgkJCV9fZ2FUcmFja2VyLmdldEJ5TmFtZSA9IG5vb3BudWxsZm47CgkJCV9fZ2FUcmFja2VyLmdldEFsbCA9IGZ1bmN0aW9uKCkgewoJCQkJcmV0dXJuIFtdOwoJCQl9OwoJCQlfX2dhVHJhY2tlci5yZW1vdmUgPSBub29wZm47CgkJCXdpbmRvd1snX19nYVRyYWNrZXInXSA9IF9fZ2FUcmFja2VyOwoJCQkJCX0pKCk7CgkJfQo=' type="text/javascript" data-cfasync="false"></script>
+<!-- / Google Analytics by MonsterInsights -->
+<meta content="Divi v.4.7.4" name="generator"/><style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	
+
+
+<style id='spai-fadein-inline-css' type='text/css'>
+img[data-spai]{opacity: 0;} div.woocommerce-product-gallery img[data-spai]{opacity: 1;} img[data-spai-eager],img[data-spai-upd] {transition: opacity .5s linear .2s;-webkit-transition: opacity .5s linear .2s;-moz-transition: opacity .5s linear .2s;-o-transition: opacity .5s linear .2s; opacity: 1;}
+</style>
+
+
+
+
+<script type='text/javascript' id='monsterinsights-frontend-script-js-extra'>
+/* <![CDATA[ */
+var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions":"doc,pdf,ppt,zip,xls,docx,pptx,xlsx","inbound_paths":"[]","home_url":"https:\/\/www.sharpsightlabs.com","hash_tracking":"false"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://vrzkj25a871bpq7t1ugcgmn9-wpengine.netdna-ssl.com/wp-content/plugins/google-analytics-for-wordpress/assets/js/frontend.min.js?ver=7.13.2' id='monsterinsights-frontend-script-js' defer></script>
+<script type='text/javascript' src='https://vrzkj25a871bpq7t1ugcgmn9-wpengine.netdna-ssl.com/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp' id='jquery-core-js'></script>
+<script data-minify="1" type='text/javascript' src='https://vrzkj25a871bpq7t1ugcgmn9-wpengine.netdna-ssl.com/wp-content/cache/min/1/wp-content/plugins/wp-quicklatex/js/wp-quicklatex-frontend-1573ceddbfbc56c376c2b4b653d33d50.js' id='wp-quicklatex-frontend-js' defer></script>
+<link rel="https://api.w.org/" href="https://www.sharpsightlabs.com/wp-json/" /><link rel="alternate" type="application/json" href="https://www.sharpsightlabs.com/wp-json/wp/v2/posts/3759" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.sharpsightlabs.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://vrzkj25a871bpq7t1ugcgmn9-wpengine.netdna-ssl.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='shortlink' href='https://www.sharpsightlabs.com/?p=3759' />
+<link rel="alternate" type="application/json+oembed" href="https://www.sharpsightlabs.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.sharpsightlabs.com%2Fblog%2Fnumpy-linspace%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.sharpsightlabs.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.sharpsightlabs.com%2Fblog%2Fnumpy-linspace%2F&#038;format=xml" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" /><style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #5b5b5b; }
+</style>
+	<style id="et-divi-customizer-global-cached-inline-styles">body,.et_pb_column_1_2 .et_quote_content blockquote cite,.et_pb_column_1_2 .et_link_content a.et_link_main_url,.et_pb_column_1_3 .et_quote_content blockquote cite,.et_pb_column_3_8 .et_quote_content blockquote cite,.et_pb_column_1_4 .et_quote_content blockquote cite,.et_pb_blog_grid .et_quote_content blockquote cite,.et_pb_column_1_3 .et_link_content a.et_link_main_url,.et_pb_column_3_8 .et_link_content a.et_link_main_url,.et_pb_column_1_4 .et_link_content a.et_link_main_url,.et_pb_blog_grid .et_link_content a.et_link_main_url,body .et_pb_bg_layout_light .et_pb_post p,body .et_pb_bg_layout_dark .et_pb_post p{font-size:18px}.et_pb_slide_content,.et_pb_best_value{font-size:20px}body{color:#333333}h1,h2,h3,h4,h5,h6{color:#333333}body{line-height:2em}.woocommerce #respond input#submit,.woocommerce-page #respond input#submit,.woocommerce #content input.button,.woocommerce-page #content input.button,.woocommerce-message,.woocommerce-error,.woocommerce-info{background:#3a3b3f!important}#et_search_icon:hover,.mobile_menu_bar:before,.mobile_menu_bar:after,.et_toggle_slide_menu:after,.et-social-icon a:hover,.et_pb_sum,.et_pb_pricing li a,.et_pb_pricing_table_button,.et_overlay:before,.entry-summary p.price ins,.woocommerce div.product span.price,.woocommerce-page div.product span.price,.woocommerce #content div.product span.price,.woocommerce-page #content div.product span.price,.woocommerce div.product p.price,.woocommerce-page div.product p.price,.woocommerce #content div.product p.price,.woocommerce-page #content div.product p.price,.et_pb_member_social_links a:hover,.woocommerce .star-rating span:before,.woocommerce-page .star-rating span:before,.et_pb_widget li a:hover,.et_pb_filterable_portfolio .et_pb_portfolio_filters li a.active,.et_pb_filterable_portfolio .et_pb_portofolio_pagination ul li a.active,.et_pb_gallery .et_pb_gallery_pagination ul li a.active,.wp-pagenavi span.current,.wp-pagenavi a:hover,.nav-single a,.tagged_as a,.posted_in a{color:#3a3b3f}.et_pb_contact_submit,.et_password_protected_form .et_submit_button,.et_pb_bg_layout_light .et_pb_newsletter_button,.comment-reply-link,.form-submit .et_pb_button,.et_pb_bg_layout_light .et_pb_promo_button,.et_pb_bg_layout_light .et_pb_more_button,.woocommerce a.button.alt,.woocommerce-page a.button.alt,.woocommerce button.button.alt,.woocommerce button.button.alt.disabled,.woocommerce-page button.button.alt,.woocommerce-page button.button.alt.disabled,.woocommerce input.button.alt,.woocommerce-page input.button.alt,.woocommerce #respond input#submit.alt,.woocommerce-page #respond input#submit.alt,.woocommerce #content input.button.alt,.woocommerce-page #content input.button.alt,.woocommerce a.button,.woocommerce-page a.button,.woocommerce button.button,.woocommerce-page button.button,.woocommerce input.button,.woocommerce-page input.button,.et_pb_contact p input[type="checkbox"]:checked+label i:before,.et_pb_bg_layout_light.et_pb_module.et_pb_button{color:#3a3b3f}.footer-widget h4{color:#3a3b3f}.et-search-form,.nav li ul,.et_mobile_menu,.footer-widget li:before,.et_pb_pricing li:before,blockquote{border-color:#3a3b3f}.et_pb_counter_amount,.et_pb_featured_table .et_pb_pricing_heading,.et_quote_content,.et_link_content,.et_audio_content,.et_pb_post_slider.et_pb_bg_layout_dark,.et_slide_in_menu_container,.et_pb_contact p input[type="radio"]:checked+label i:before{background-color:#3a3b3f}.container,.et_pb_row,.et_pb_slider .et_pb_container,.et_pb_fullwidth_section .et_pb_title_container,.et_pb_fullwidth_section .et_pb_title_featured_container,.et_pb_fullwidth_header:not(.et_pb_fullscreen) .et_pb_fullwidth_header_container{max-width:1800px}.et_boxed_layout #page-container,.et_boxed_layout.et_non_fixed_nav.et_transparent_nav #page-container #top-header,.et_boxed_layout.et_non_fixed_nav.et_transparent_nav #page-container #main-header,.et_fixed_nav.et_boxed_layout #page-container #top-header,.et_fixed_nav.et_boxed_layout #page-container #main-header,.et_boxed_layout #page-container .container,.et_boxed_layout #page-container .et_pb_row{max-width:1960px}a{color:#cc0000}#main-header,#main-header .nav li ul,.et-search-form,#main-header .et_mobile_menu{background-color:#2a2b2d}#top-header,#et-secondary-nav li ul{background-color:#3a3b3f}.et_header_style_centered .mobile_nav .select_page,.et_header_style_split .mobile_nav .select_page,.et_nav_text_color_light #top-menu>li>a,.et_nav_text_color_dark #top-menu>li>a,#top-menu a,.et_mobile_menu li a,.et_nav_text_color_light .et_mobile_menu li a,.et_nav_text_color_dark .et_mobile_menu li a,#et_search_icon:before,.et_search_form_container input,span.et_close_search_field:after,#et-top-navigation .et-cart-info{color:rgba(147,147,147,0.6)}.et_search_form_container input::-moz-placeholder{color:rgba(147,147,147,0.6)}.et_search_form_container input::-webkit-input-placeholder{color:rgba(147,147,147,0.6)}.et_search_form_container input:-ms-input-placeholder{color:rgba(147,147,147,0.6)}#top-menu li a{font-size:16px}body.et_vertical_nav .container.et_search_form_container .et-search-form input{font-size:16px!important}#top-menu li.current-menu-ancestor>a,#top-menu li.current-menu-item>a,#top-menu li.current_page_item>a,.et_color_scheme_red #top-menu li.current-menu-ancestor>a,.et_color_scheme_red #top-menu li.current-menu-item>a,.et_color_scheme_red #top-menu li.current_page_item>a,.et_color_scheme_pink #top-menu li.current-menu-ancestor>a,.et_color_scheme_pink #top-menu li.current-menu-item>a,.et_color_scheme_pink #top-menu li.current_page_item>a,.et_color_scheme_orange #top-menu li.current-menu-ancestor>a,.et_color_scheme_orange #top-menu li.current-menu-item>a,.et_color_scheme_orange #top-menu li.current_page_item>a,.et_color_scheme_green #top-menu li.current-menu-ancestor>a,.et_color_scheme_green #top-menu li.current-menu-item>a,.et_color_scheme_green #top-menu li.current_page_item>a{color:#ffffff}#main-footer{background-color:#1d1d1d}#footer-widgets .footer-widget a,#footer-widgets .footer-widget li a,#footer-widgets .footer-widget li a:hover{color:#ffffff}.footer-widget{color:#ffffff}#main-footer .footer-widget h4{color:#3a3b3f}.footer-widget li:before{border-color:#3a3b3f}#footer-widgets .footer-widget li:before{top:12.3px}body .et_pb_button,.woocommerce a.button.alt,.woocommerce-page a.button.alt,.woocommerce button.button.alt,.woocommerce button.button.alt.disabled,.woocommerce-page button.button.alt,.woocommerce-page button.button.alt.disabled,.woocommerce input.button.alt,.woocommerce-page input.button.alt,.woocommerce #respond input#submit.alt,.woocommerce-page #respond input#submit.alt,.woocommerce #content input.button.alt,.woocommerce-page #content input.button.alt,.woocommerce a.button,.woocommerce-page a.button,.woocommerce button.button,.woocommerce-page button.button,.woocommerce input.button,.woocommerce-page input.button,.woocommerce #respond input#submit,.woocommerce-page #respond input#submit,.woocommerce #content input.button,.woocommerce-page #content input.button,.woocommerce-message a.button.wc-forward{border-width:3px!important;border-color:#aaaaaa;border-radius:0px;letter-spacing:1px}body.et_pb_button_helper_class .et_pb_button,body.et_pb_button_helper_class .et_pb_module.et_pb_button,.woocommerce.et_pb_button_helper_class a.button.alt,.woocommerce-page.et_pb_button_helper_class a.button.alt,.woocommerce.et_pb_button_helper_class button.button.alt,.woocommerce.et_pb_button_helper_class button.button.alt.disabled,.woocommerce-page.et_pb_button_helper_class button.button.alt,.woocommerce-page.et_pb_button_helper_class button.button.alt.disabled,.woocommerce.et_pb_button_helper_class input.button.alt,.woocommerce-page.et_pb_button_helper_class input.button.alt,.woocommerce.et_pb_button_helper_class #respond input#submit.alt,.woocommerce-page.et_pb_button_helper_class #respond input#submit.alt,.woocommerce.et_pb_button_helper_class #content input.button.alt,.woocommerce-page.et_pb_button_helper_class #content input.button.alt,.woocommerce.et_pb_button_helper_class a.button,.woocommerce-page.et_pb_button_helper_class a.button,.woocommerce.et_pb_button_helper_class button.button,.woocommerce-page.et_pb_button_helper_class button.button,.woocommerce.et_pb_button_helper_class input.button,.woocommerce-page.et_pb_button_helper_class input.button,.woocommerce.et_pb_button_helper_class #respond input#submit,.woocommerce-page.et_pb_button_helper_class #respond input#submit,.woocommerce.et_pb_button_helper_class #content input.button,.woocommerce-page.et_pb_button_helper_class #content input.button{color:#888888}h1,h2,h3,h4,h5,h6,.et_quote_content blockquote p,.et_pb_slide_description .et_pb_slide_title{font-weight:bold;font-style:normal;text-transform:uppercase;text-decoration:none;line-height:1.3em}.et_slide_in_menu_container,.et_slide_in_menu_container .et-search-field{letter-spacing:px}.et_slide_in_menu_container .et-search-field::-moz-placeholder{letter-spacing:px}.et_slide_in_menu_container .et-search-field::-webkit-input-placeholder{letter-spacing:px}.et_slide_in_menu_container .et-search-field:-ms-input-placeholder{letter-spacing:px}@media only screen and (min-width:981px){.et_header_style_left #et-top-navigation,.et_header_style_split #et-top-navigation{padding:29px 0 0 0}.et_header_style_left #et-top-navigation nav>ul>li>a,.et_header_style_split #et-top-navigation nav>ul>li>a{padding-bottom:29px}.et_header_style_split .centered-inline-logo-wrap{width:58px;margin:-58px 0}.et_header_style_split .centered-inline-logo-wrap #logo{max-height:58px}.et_pb_svg_logo.et_header_style_split .centered-inline-logo-wrap #logo{height:58px}.et_header_style_centered #top-menu>li>a{padding-bottom:10px}.et_header_style_slide #et-top-navigation,.et_header_style_fullscreen #et-top-navigation{padding:20px 0 20px 0!important}.et_header_style_centered #main-header .logo_container{height:58px}#logo{max-height:30%}.et_pb_svg_logo #logo{height:30%}.et_header_style_centered.et_hide_primary_logo #main-header:not(.et-fixed-header) .logo_container,.et_header_style_centered.et_hide_fixed_logo #main-header.et-fixed-header .logo_container{height:10.44px}.et-fixed-header#top-header,.et-fixed-header#top-header #et-secondary-nav li ul{background-color:#3a3b3f}.et-fixed-header #top-menu li a{font-size:14px}.et-fixed-header #top-menu a,.et-fixed-header #et_search_icon:before,.et-fixed-header #et_top_search .et-search-form input,.et-fixed-header .et_search_form_container input,.et-fixed-header .et_close_search_field:after,.et-fixed-header #et-top-navigation .et-cart-info{color:rgba(147,147,147,0.6)!important}.et-fixed-header .et_search_form_container input::-moz-placeholder{color:rgba(147,147,147,0.6)!important}.et-fixed-header .et_search_form_container input::-webkit-input-placeholder{color:rgba(147,147,147,0.6)!important}.et-fixed-header .et_search_form_container input:-ms-input-placeholder{color:rgba(147,147,147,0.6)!important}.et-fixed-header #top-menu li.current-menu-ancestor>a,.et-fixed-header #top-menu li.current-menu-item>a,.et-fixed-header #top-menu li.current_page_item>a{color:#ffffff!important}}@media only screen and (min-width:2250px){.et_pb_row{padding:45px 0}.et_pb_section{padding:90px 0}.single.et_pb_pagebuilder_layout.et_full_width_page .et_post_meta_wrapper{padding-top:135px}.et_pb_fullwidth_section{padding:0}}h1,h1.et_pb_contact_main_title,.et_pb_title_container h1{font-size:38px}h2,.product .related h2,.et_pb_column_1_2 .et_quote_content blockquote p{font-size:32px}h3{font-size:27px}h4,.et_pb_circle_counter h3,.et_pb_number_counter h3,.et_pb_column_1_3 .et_pb_post h2,.et_pb_column_1_4 .et_pb_post h2,.et_pb_blog_grid h2,.et_pb_column_1_3 .et_quote_content blockquote p,.et_pb_column_3_8 .et_quote_content blockquote p,.et_pb_column_1_4 .et_quote_content blockquote p,.et_pb_blog_grid .et_quote_content blockquote p,.et_pb_column_1_3 .et_link_content h2,.et_pb_column_3_8 .et_link_content h2,.et_pb_column_1_4 .et_link_content h2,.et_pb_blog_grid .et_link_content h2,.et_pb_column_1_3 .et_audio_content h2,.et_pb_column_3_8 .et_audio_content h2,.et_pb_column_1_4 .et_audio_content h2,.et_pb_blog_grid .et_audio_content h2,.et_pb_column_3_8 .et_pb_audio_module_content h2,.et_pb_column_1_3 .et_pb_audio_module_content h2,.et_pb_gallery_grid .et_pb_gallery_item h3,.et_pb_portfolio_grid .et_pb_portfolio_item h2,.et_pb_filterable_portfolio_grid .et_pb_portfolio_item h2{font-size:22px}h5{font-size:20px}h6{font-size:17px}.et_pb_slide_description .et_pb_slide_title{font-size:58px}.woocommerce ul.products li.product h3,.woocommerce-page ul.products li.product h3,.et_pb_gallery_grid .et_pb_gallery_item h3,.et_pb_portfolio_grid .et_pb_portfolio_item h2,.et_pb_filterable_portfolio_grid .et_pb_portfolio_item h2,.et_pb_column_1_4 .et_pb_audio_module_content h2{font-size:20px}	h1,h2,h3,h4,h5,h6{font-family:'Montserrat',Helvetica,Arial,Lucida,sans-serif}body,input,textarea,select{font-family:'Montserrat',Helvetica,Arial,Lucida,sans-serif}#main-header,#et-top-navigation{font-family:'Poppins',Helvetica,Arial,Lucida,sans-serif}body #page-container #sidebar{width:33%}body #page-container #left-area{width:67%}.et_right_sidebar #main-content .container:before{right:33%!important}.et_left_sidebar #main-content .container:before{left:33%!important}@media only screen and (min-width:800px){.bbb_blog_list a img{float:left;width:40%;padding-right:20px;vertical-align:bottom;padding-bottom:30px}}body{font-weight:400}#main-content .container{width:92%}.et_pb_section .et_pb_row{width:92%}h2,.h2{margin-top:30px}h3,h4,h5,h6,.h3,.h4,.h5,.h6{margin-top:24px}ol ul li{padding:10px 0px}ul{margin-left:30px}ol{margin-left:30px}li{margin-bottom:15px}#sidebar .et_bloom_widget_content{display:block!important}pre{font-size:16px;background-color:#eeeeee;padding:15px;white-space:pre;overflow-wrap:normal;overflow-x:auto}.myButton{background-color:#00bfac;display:inline-block;cursor:pointer;color:#ffffff;font-family:Montserrat;font-size:22px;font-weight:500;letter-spacing:1px;padding:10px 15px 10px 15px;text-decoration:none}.myButton:hover{background-color:#00e0c0}.myButton:active{position:relative;top:1px}.pandas_mastery_button{background-color:#6B2EB9;display:inline-block;cursor:pointer;color:#ffffff;font-family:Montserrat;font-size:22px;font-weight:500;letter-spacing:1px;padding:10px 15px 10px 15px;text-decoration:none}.pandas_mastery_button:hover{background-color:#00e0c0}.pandas_mastery_button:active{position:relative;top:1px}.twitter-tweet{margin:auto}</style><noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript><script>
+/*! loadCSS rel=preload polyfill. [c]2017 Filament Group, Inc. MIT License */
+(function(w){"use strict";if(!w.loadCSS){w.loadCSS=function(){}}
+var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.createElement("link").relList.supports("preload")}catch(e){ret=!1}
+return function(){return ret}})();rp.bindMediaToggle=function(link){var finalMedia=link.media||"all";function enableStylesheet(){link.media=finalMedia}
+if(link.addEventListener){link.addEventListener("load",enableStylesheet)}else if(link.attachEvent){link.attachEvent("onload",enableStylesheet)}
+setTimeout(function(){link.rel="stylesheet";link.media="only x"});setTimeout(enableStylesheet,3000)};rp.poly=function(){if(rp.support()){return}
+var links=w.document.getElementsByTagName("link");for(var i=0;i<links.length;i++){var link=links[i];if(link.rel==="preload"&&link.getAttribute("as")==="style"&&!link.getAttribute("data-loadcss")){link.setAttribute("data-loadcss",!0);rp.bindMediaToggle(link)}}};if(!rp.support()){rp.poly();var run=w.setInterval(rp.poly,500);if(w.addEventListener){w.addEventListener("load",function(){rp.poly();w.clearInterval(run)})}else if(w.attachEvent){w.attachEvent("onload",function(){rp.poly();w.clearInterval(run)})}}
+if(typeof exports!=="undefined"){exports.loadCSS=loadCSS}
+else{w.loadCSS=loadCSS}}(typeof global!=="undefined"?global:this))
+</script><link href="https://cdn.shortpixel.ai" rel="preconnect" crossorigin></head>
+<body class="post-template-default single single-post postid-3759 single-format-standard custom-background et_bloom et_pb_button_helper_class et_fixed_nav et_show_nav et_pb_show_title et_primary_nav_dropdown_animation_fade et_secondary_nav_dropdown_animation_fade et_header_style_left et_pb_footer_columns2 et_cover_background windows et_pb_gutters3 et_right_sidebar et_divi_theme et-db et_minified_js et_minified_css">
+	<div id="page-container">
+
+	
+	
+			<header id="main-header" data-height-onload="58">
+			<div class="container clearfix et_menu_container">
+							<div class="logo_container">
+					<span class="logo_helper"></span>
+					<a href="https://www.sharpsightlabs.com/">
+						<img src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNjQyIDU2IiB3aWR0aD0iNjQyIiBoZWlnaHQ9IjU2IiBkYXRhLXU9Imh0dHBzJTNBJTJGJTJGd3d3LnNoYXJwc2lnaHRsYWJzLmNvbSUyRndwLWNvbnRlbnQlMkZ1cGxvYWRzJTJGMjAxOCUyRjAzJTJGU2hhcnBTaWdodF9Mb2dvX0ZpbmFsX1dlYi5wbmciIGRhdGEtdz0iNjQyIiBkYXRhLWg9IjU2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjwvc3ZnPg==" data-spai="1" alt="Sharp Sight" id="logo" data-height-percentage="30" />
+					</a>
+				</div>
+							<div id="et-top-navigation" data-height="58" data-fixed-height="40">
+											<nav id="top-menu-nav">
+						<ul id="top-menu" class="nav"><li id="menu-item-4912" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-4912"><a href="https://www.sharpsightlabs.com/">HOME</a></li>
+<li id="menu-item-4914" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4914"><a href="https://www.sharpsightlabs.com/course-directory/">COURSES</a></li>
+<li id="menu-item-4915" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4915"><a href="https://www.sharpsightlabs.com/blog/">BLOG</a></li>
+<li id="menu-item-4913" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4913"><a href="https://sso.teachable.com/secure/443305/users/sign_in">STUDENT LOGIN</a></li>
+</ul>						</nav>
+					
+					
+					
+					
+					<div id="et_mobile_nav_menu">
+				<div class="mobile_nav closed">
+					<span class="select_page">Select Page</span>
+					<span class="mobile_menu_bar mobile_menu_bar_toggle"></span>
+				</div>
+			</div>				</div> <!-- #et-top-navigation -->
+			</div> <!-- .container -->
+			<div class="et_search_outer">
+				<div class="container et_search_form_container">
+					<form role="search" method="get" class="et-search-form" action="https://www.sharpsightlabs.com/">
+					<input type="search" class="et-search-field" placeholder="Search &hellip;" value="" name="s" title="Search for:" />					</form>
+					<span class="et_close_search_field"></span>
+				</div>
+			</div>
+		</header> <!-- #main-header -->
+			<div id="et-main-area">
+	
+<div id="main-content">
+		<div class="container">
+		<div id="content-area" class="clearfix">
+			<div id="left-area">
+											<article id="post-3759" class="et_pb_post post-3759 post type-post status-publish format-standard has-post-thumbnail hentry category-data-manipulation category-data-science-skills category-numpy category-python tag-data-manipulation tag-numpy tag-python">
+											<div class="et_post_meta_wrapper">
+							<h1 class="entry-title">How to use the NumPy linspace function</h1>
+
+						<p class="post-meta"> by <span class="author vcard"><a href="https://www.sharpsightlabs.com/blog/author/sharpsight_admin/" title="Posts by Joshua Ebner" rel="author">Joshua Ebner</a></span> | <span class="published">Oct 15, 2018</span></p>
+												</div> <!-- .et_post_meta_wrapper -->
+				
+					<div class="entry-content">
+					<p>The NumPy linspace function (sometimes called np.linspace) is a tool in Python for creating numeric sequences.</p>
+<p>It&#8217;s somewhat similar to the NumPy arange function, in that it creates sequences of evenly spaced numbers <a href="https://www.sharpsightlabs.com/blog/numpy-array-python/">structured as a NumPy array</a>.</p>
+<p>There are some differences though.  Moreover, some people find the linspace function to be a little tricky to use.</p>
+<p>It&#8217;s not that hard to understand, but you really need to learn how it works.</p>
+<p>That being said, this tutorial will explain how the NumPy linspace function works.  It will explain the syntax, and it will also show you concrete examples of the function so you can see it in action.</p>
+<p>Near the bottom of the post, this will also explain a little more about how np.linspace differs from np.arange.</p>
+<p>Ok, first things first.  Let&#8217;s look a little more closely at what the np.linspace function does and how it works.</p>
+<h2>Numpy linspace creates sequences of evenly spaced values within an interval</h2>
+<p>The NumPy linspace function creates sequences of evenly spaced values within a defined interval.</p>
+<p>Essentally, you specify a starting point and an ending point of an interval, and then specify the total number of breakpoints you want within that interval (<em>including</em> the start and end points).  The np.linspace function will return a sequence of evenly spaced values on that interval.</p>
+<p>To illustrate this, here&#8217;s a quick example.  (We&#8217;ll look at more examples later, but this is a quick one just to show you what np.linspace does.)</p>
+<pre>
+np.linspace(start = 0, stop = 100, num = 5)
+</pre>
+<p>This code <a href="https://www.sharpsightlabs.com/blog/numpy-array-python/">produces a NumPy array</a> (an <code>ndarray</code> object) that looks like the following:</p>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgOTI0IDM3MCIgd2lkdGg9IjkyNCIgaGVpZ2h0PSIzNzAiIGRhdGEtdT0iaHR0cHMlM0ElMkYlMkZ3d3cuc2hhcnBzaWdodGxhYnMuY29tJTJGd3AtY29udGVudCUyRnVwbG9hZHMlMkYyMDE4JTJGMTAlMkZucC1saW5zcGFjZS0wLTEwMC01LnBuZyIgZGF0YS13PSI5MjQiIGRhdGEtaD0iMzcwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjwvc3ZnPg==" data-spai="1" alt="A NumPy array produced with the NumPy linspace function." width="462" class="aligncenter size-full wp-image-3762"   sizes="(max-width: 924px) 100vw, 924px" /></p>
+<p>That&#8217;s the <code>ndarray</code> that the code produces, but we can also visualize the output like this:</p>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTIwNCA4MTgiIHdpZHRoPSIxMjA0IiBoZWlnaHQ9IjgxOCIgZGF0YS11PSJodHRwcyUzQSUyRiUyRnd3dy5zaGFycHNpZ2h0bGFicy5jb20lMkZ3cC1jb250ZW50JTJGdXBsb2FkcyUyRjIwMTglMkYxMCUyRnZpc3VhbC1yZXByZXNlbnRhdGlvbi1vZi1ucC1saW5zcGFjZS0wLTEwMC01LnBuZyIgZGF0YS13PSIxMjA0IiBkYXRhLWg9IjgxOCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48L3N2Zz4=" data-spai="1" alt="A visual representation of the output of np.arange(start = 0, stop = 100, num = 5)." width="500" class="aligncenter size-full wp-image-3763"   sizes="(max-width: 1204px) 100vw, 1204px" /></p>
+<p>So what&#8217;s going on here?</p>
+<p>Remember: the NumPy linspace function produces a <em>evenly spaced observations</em> within a defined interval.</p>
+<p>We specified that interval with the <code>start</code> and <code>stop</code> parameters.  In particular, this interval starts at 0 and ends at 100.</p>
+<p>We also specified that we wanted 5 observations within that range.  So, the linspace function returned an <code>ndarray</code> with 5 evenly spaced elements.  The first element is 0.  The last element is 100.  The remaining 3 elements are evenly spaced between 0 and 100.</p>
+<p>As should be expected, the output array is consistent with the arguments we&#8217;ve used in the syntax.</p>
+<p>Having said that, let&#8217;s look a little more closely at the syntax of the np.linspace function so you can understand how it works a little more clearly.</p>
+<h2>The syntax of NumPy linspace</h2>
+<p>The syntax of the NumPy linspace is very straightforward.  </p>
+<p>Obviously, when using the function, the first thing you need to do is call the function name itself:</p>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTM4MCAxMDI2IiB3aWR0aD0iMTM4MCIgaGVpZ2h0PSIxMDI2IiBkYXRhLXU9Imh0dHBzJTNBJTJGJTJGd3d3LnNoYXJwc2lnaHRsYWJzLmNvbSUyRndwLWNvbnRlbnQlMkZ1cGxvYWRzJTJGMjAxOCUyRjEwJTJGbnAtbGluc3BhY2Utc3ludGF4X3YyLnBuZyIgZGF0YS13PSIxMzgwIiBkYXRhLWg9IjEwMjYiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PC9zdmc+" data-spai="1" alt="An explanation of the syntax for NumPy linspace." width="1380" height="500" class="aligncenter size-full wp-image-3764" /></p>
+<p>To do this, you use the code <code>np.linspace</code> (assuming that you&#8217;ve imported NumPy as <code>np</code>).</p>
+<p>Inside of the <code>np.linspace</code> code above, you&#8217;ll notice 3 parameters: <code>start</code>, <code>stop</code>, and <code>num</code>.  These are 3 parameters that you&#8217;ll use most frequently with the linspace function.  There are also a few other optional parameters that you can use.</p>
+<p>Let&#8217;s talk about the parameters of np.linspace:</p>
+<h3>The parameters of NumPy linspace</h3>
+<p>There are several parameters that help you control the <code>linspace</code> function: <code>start</code>, <code>stop</code>, <code>num</code>, <code>endpoint</code>, and <code>dtype</code>.</p>
+<p>To understand these parameters, let&#8217;s take a look again at the following visual:</p>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTIwNCA4MTgiIHdpZHRoPSIxMjA0IiBoZWlnaHQ9IjgxOCIgZGF0YS11PSJodHRwcyUzQSUyRiUyRnd3dy5zaGFycHNpZ2h0bGFicy5jb20lMkZ3cC1jb250ZW50JTJGdXBsb2FkcyUyRjIwMTglMkYxMCUyRnZpc3VhbC1yZXByZXNlbnRhdGlvbi1vZi1ucC1saW5zcGFjZS0wLTEwMC01LnBuZyIgZGF0YS13PSIxMjA0IiBkYXRhLWg9IjgxOCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48L3N2Zz4=" data-spai="1" alt="A visual representation of the output of np.arange(start = 0, stop = 100, num = 5)." width="500" class="aligncenter size-full wp-image-3763"   sizes="(max-width: 1204px) 100vw, 1204px" /></p>
+<p><strong><code>start</code></strong><br />
+The <code>start</code> parameter is the beginning of the range of numbers.  </p>
+<p>So if you set <code>start = 0</code>, the first number in the new <code>nd.array</code> will be 0.</p>
+<p>Keep in mind that this parameter is required.  </p>
+<p><strong><code>stop</code></strong><br />
+The <code>stop</code> parameter is the stopping point of the range of numbers.  </p>
+<p>In most cases, this will be the last value in the range of numbers.  Having said that, if you modify the parameter and set <code>endpoint = False</code>, this value will <em>not</em> be included in the output array. (See the examples below to understand how this works.)</p>
+<p><strong><code>num</code></strong> (optional)<br />
+The <code>num</code> parameter controls how many total items will appear in the output array.</p>
+<p>For example, if <code>num = 5</code>, then there will be 5 total items in the output array.  If, <code>num = 10</code>, then there will be 10 total items in the output array, and so on.</p>
+<p>This parameter is optional.  If you don&#8217;t provide a value for <code>num</code>, then np.linspace will use <code>num = 50</code> as a default.</p>
+<p><strong><code>endpoint</code></strong> (optional)<br />
+The <code>endpoint</code> parameter controls whether or not the <code>stop</code> value is included in the output array.   </p>
+<p>If <code>endpoint = True</code>, then the value of the <code>stop</code> parameter will be included as the last item in the <code>nd.array</code>.</p>
+<p>If <code>endpoint = False</code>, then the value of the <code>stop</code> parameter will <strong>not</strong> be included.</p>
+<p>By default, <code>endpoint</code> evaluates as <code>True</code>.</p>
+<p><strong><code>dtype</code></strong> (optional)<br />
+Just like in many other NumPy functions, with <code>np.linspace</code>, the <code>dtype</code> parameter controls the data type of the items in the output array.</p>
+<p>If you don&#8217;t specify a data type, Python will <em>infer</em> the data type based on the values of the other parameters.</p>
+<p>If you do explicitly use this parameter, however, you can use <a href="https://docs.scipy.org/doc/numpy/user/basics.types.html">any of the available data types from NumPy and base Python</a>.</p>
+<h4>You don&#8217;t need to use all of the parameters every time</h4>
+<p>Keep in mind that you won&#8217;t use all of these parameters every time that you use the np.linspace function. Several of these parameters are optional.  </p>
+<p>Moreover, <code>start</code>, <code>stop</code>, and <code>num</code> are much more commonly used than <code>endpoint</code></strong> and <code>dtype</code></strong>.</p>
+<h4>Using the syntax without parameter values</h4>
+<p>Also keep in mind that you don&#8217;t need to explicitly use the parameter names.  You can write code <em>without</em> the parameter names themselves; you can add the arguments as &#8220;positional arguments&#8221; to the function.</p>
+<p>Here&#8217;s an example:</p>
+<pre>
+np.linspace(0, 100, 5)
+</pre>
+<p>This code is functionally identical to the code we used in our previous examples: <code>np.linspace(start = 0, stop = 100, num = 5)</code>.</p>
+<p>The main difference is that we did not explicitly use the <code>start</code>, <code>stop</code>, and <code>num</code> parameters.  Instead, we provided arguments to those parameters by <em>position</em>.  When you don&#8217;t use the parameter names explicitly, Python knows that the first number (0) is supposed to be the <code>start</code> of the interval.  It know that 100 is supposed to be the <code>stop</code>.  And it knows that the third number (5) corresponds to the <code>num</code> parameter.  Again, when you don&#8217;t explicitly use the parameter names, Python assigns the argument values to parameters <em>strictly by position</em>; which value appears first, second, third, etc.</p>
+<p>You&#8217;ll see people do this frequently in their code.  People will commonly exclude the parameter names in their code and use positional arguments instead.  Although I realize that it&#8217;s a little faster to write code with positional arguments, I think that it&#8217;s clearer to actually use the parameter names.  As a best practice, you should probably use them.</p>
+<h2>Examples: how to use numpy linspace</h2>
+<p>Now that you&#8217;ve learned how the syntax works, and you&#8217;ve learned about each of the parameters, let&#8217;s work through a few concrete examples.</p>
+<h4>Create interval between 0 and 1, in breaks of .1</h4>
+<p>A quick example</p>
+<pre>
+np.linspace(start = 0, stop = 1, num = 11)
+</pre>
+<p>Which produces the output array:</p>
+<pre>
+array([ 0. ,  0.1,  0.2,  0.3,  0.4,  0.5,  0.6,  0.7,  0.8,  0.9,  1. ])
+</pre>
+<p>An example like this would be useful if you&#8217;re working with percents in some way.  For example, if you were plotting percentages or plotting &#8220;accuracy&#8221; metrics for a machine learning classifier, you might use this code to construct part of your plot.  Explaining how to do that is beyond the scope of this post, so I&#8217;ll leave a deeper explanation of that for a future blog post.</p>
+<h4>Create interval between 0 and 100, in breaks of 10</h4>
+<p>A very similar example is creating a range of values from 0 to 100, in breaks of 10.</p>
+<pre>
+np.linspace(start = 0, stop = 100, num = 11)
+</pre>
+<p>The code for this is almost identical to the prior example, except we&#8217;re creating values from 0 to 100.</p>
+<p>Since it&#8217;s somewhat common to work with data with a range from 0 to 100, a code snippet like this might be useful.</p>
+<h4>How to use the endpoint parameter</h4>
+<p>As mentioned earlier in this blog post, the <code>endpoint</code> parameter controls whether or not the <code>stop</code> value is included in the output array.   </p>
+<p>By default (if you don&#8217;t set any value for <code>endpoint</code>), this parameter will have the default value of <code>True</code>.  That means that the value of the <code>stop</code> parameter <em>will</em> be included in the output array (as the final value).</p>
+<p>However, if you set <code>endpoint = False</code>, then the value of the <code>stop</code> parameter will <em>not</em> be included.</p>
+<p>Here&#8217;s an example.</p>
+<p>In the following code, <code>stop</code> is set to 5. </p>
+<pre>
+np.linspace(start = 1, stop = 5, num = 4, endpoint = False)
+</pre>
+<p>But because we&#8217;re also setting <code>endpoint = False</code>, 5 will <em>not</em> be included as the final value.</p>
+<p>On the contrary, the output <code>nd.array</code> contains 4 evenly spaced values (i.e.,  <code>num = 4</code>), starting at 1, up to but <em>excluding</em> 5:</p>
+<pre>
+array([ 1.,  2.,  3.,  4.])
+</pre>
+<p>Personally, I find that it&#8217;s a little un-intuitive to use <code>endpoint = False</code>, so I don&#8217;t use it often.  But if you have a reason to use it, this is how to do it.</p>
+<h4>Manually specify the data type</h4>
+<p>As mentioned earlier, the NumPy linspace function is supposed to &#8220;infer&#8221; the data type from the other input arguments.  You&#8217;ll notice that in many cases, the output is an array of floats.</p>
+<p>If you want to manually specify the data type, you can use the <code>dtype</code> parameter.</p>
+<p>This is very straightforward.  Using the <code>dtype</code> parameter with np.linspace is identical to how you <a href="https://www.sharpsightlabs.com/blog/numpy-array-python/">specify the data type with np.array</a>, <a href="https://www.sharpsightlabs.com/blog/numpy-arange/">specify the data type with np.arange</a>, etc.</p>
+<p>Essentially, you use the <code>dtype</code> parameter and indicate the exact Python or NumPy data type that you want for the output array:</p>
+<pre>
+np.linspace(start = 0, stop = 100, num = 5, dtype = int)
+</pre>
+<p>In this case, when we set <code>dtype = int</code>, the linspace function produces an nd.array object with <em>integers</em> instead of floats.</p>
+<p>Again, Python and NumPy <a href="https://docs.scipy.org/doc/numpy/user/basics.types.html">have a variety of available data types</a>, and you can specify any of these with the <code>dtype</code> parameter.</p>
+<h2>How np.linspace is different from np.arange</h2>
+<p>If you&#8217;re familiar with NumPy, you might have noticed that np.linspace is rather <a href="https://www.sharpsightlabs.com/blog/numpy-arange/">similar to the np.arange function</a>.</p>
+<p>The essential difference between NumPy linspace and NumPy arange is that linspace enables you to control the precise end value, whereas arange gives you more direct control over the increments between values in the sequence.</p>
+<p>To be clear, if you use them carefully, both linspace and arange can be used to create evenly spaced sequences.  To a large extent, these are two similar different tools for creating sequences, and which you use will be a matter of preference.  I personally find np.arange to be more intuitive, so I tend to prefer arange over linspace.  Again though, this will mostly be a matter of preference, so try them both and see which you prefer.</p>
+<h2>For more Python data science tutorials, sign up for our email list</h2>
+<p>Here at Sharp Sight, we teach data science.  We want to help you master data science as fast as possible.</p>
+<p>If you sign up for our email list, you&#8217;ll receive Python data science tutorials delivered to your inbox.</p>
+<p>You&#8217;ll get free tutorials on:</p>
+<ul>
+<li>NumPy</li>
+<li>Pandas</li>
+<li>Base Python</li>
+<li>Scikit learn</li>
+<li>Machine learning</li>
+<li>Deep learning</li>
+<li>&#8230; and more</li>
+</ul>
+<p>&#8230; delivered to your inbox every week.</p>
+<p>Want to learn data science in Python?  Sign up now.</p>
+<div class="et_bloom_inline_form et_bloom_optin et_bloom_make_form_visible et_bloom_optin_7" style="display: none;">
+				<style type="text/css">.et_bloom .et_bloom_optin_7 .et_bloom_form_content { background-color: #999999 !important; } .et_bloom .et_bloom_optin_7 .et_bloom_form_container .et_bloom_form_header { background-color: #2a2b2d !important; } .et_bloom .et_bloom_optin_7 .carrot_edge .et_bloom_form_content:before { border-top-color: #2a2b2d !important; } .et_bloom .et_bloom_optin_7 .carrot_edge.et_bloom_form_right .et_bloom_form_content:before, .et_bloom .et_bloom_optin_7 .carrot_edge.et_bloom_form_left .et_bloom_form_content:before { border-top-color: transparent !important; border-left-color: #2a2b2d !important; }
+						@media only screen and ( max-width: 767px ) {.et_bloom .et_bloom_optin_7 .carrot_edge.et_bloom_form_right .et_bloom_form_content:before, .et_bloom .et_bloom_optin_7 .carrot_edge.et_bloom_form_left .et_bloom_form_content:before { border-top-color: #2a2b2d !important; border-left-color: transparent !important; }
+						}.et_bloom .et_bloom_optin_7 .et_bloom_form_content button { background-color: #4598ab !important; } .et_bloom .et_bloom_optin_7 .et_bloom_form_content .et_bloom_fields i { color: #4598ab !important; } .et_bloom .et_bloom_optin_7 .et_bloom_form_content .et_bloom_custom_field_radio i:before { background: #4598ab !important; } .et_bloom .et_bloom_optin_7 .et_bloom_form_content button { background-color: #4598ab !important; } .et_bloom .et_bloom_optin_7 .et_bloom_form_container h2, .et_bloom .et_bloom_optin_7 .et_bloom_form_container h2 span, .et_bloom .et_bloom_optin_7 .et_bloom_form_container h2 strong { font-family: "Ubuntu", Helvetica, Arial, Lucida, sans-serif; }.et_bloom .et_bloom_optin_7 .et_bloom_form_container p, .et_bloom .et_bloom_optin_7 .et_bloom_form_container p span, .et_bloom .et_bloom_optin_7 .et_bloom_form_container p strong, .et_bloom .et_bloom_optin_7 .et_bloom_form_container form input, .et_bloom .et_bloom_optin_7 .et_bloom_form_container form button span { font-family: "Ubuntu", Helvetica, Arial, Lucida, sans-serif; } </style>
+				<div class="et_bloom_form_container  with_edge carrot_edge et_bloom_form_text_dark et_bloom_form_bottom et_bloom_inline_1_field">
+					
+			<div class="et_bloom_form_container_wrapper clearfix">
+				<div class="et_bloom_header_outer">
+					<div class="et_bloom_form_header et_bloom_header_text_light">
+						
+						<div class="et_bloom_form_text">
+						<h2>Sign up for FREE data science tutorials</h2><p>If you want to master data science fast, sign up for our email list.</p>
+<p>When you sign up, you'll receive FREE weekly tutorials on how to do data science in R and Python. </p>
+					</div>
+						
+					</div>
+				</div>
+				<div class="et_bloom_form_content et_bloom_1_field et_bloom_bottom_inline">
+					
+					
+					<form method="post" class="clearfix">
+						<div class="et_bloom_fields">
+							
+							<p class="et_bloom_popup_input et_bloom_subscribe_email">
+								<input placeholder="Enter your best email address">
+							</p>
+							
+							<button data-optin_id="optin_7" data-service="aweber" data-list_id="3573443" data-page_id="3759" data-account="josh@sharpsightlabs.com" data-ip_address="true" class="et_bloom_submit_subscription">
+								<span class="et_bloom_subscribe_loader"></span>
+								<span class="et_bloom_button_text et_bloom_button_text_color_light">Give me free tutorials!</span>
+							</button>
+						</div>
+					</form>
+					<div class="et_bloom_success_container">
+						<span class="et_bloom_success_checkmark"></span>
+					</div>
+					<h2 class="et_bloom_success_message">Check your email inbox to confirm your subscription ...</h2>
+					
+				</div>
+			</div>
+			<span class="et_bloom_close_button"></span>
+				</div>
+			</div>
+					</div> <!-- .entry-content -->
+					<div class="et_post_meta_wrapper">
+					<!-- You can start editing here. -->
+
+<section id="comment-wrap">
+	<h1 id="comments" class="page_title">15 Comments</h1>
+			
+					<ol class="commentlist clearfix">
+					<li class="comment even thread-even depth-1" id="li-comment-38713">
+		<article id="comment-38713" class="comment-body clearfix">
+			<div class="comment_avatar">
+								</div>
+
+			<div class="comment_postinfo">
+					<span class="fn">Lovin Kumar</span>				<span class="comment_date">
+					on October 25, 2018 at 12:03 PM				</span>
+												</div> <!-- .comment_postinfo -->
+
+			<div class="comment_area">
+				
+				<div class="comment-content clearfix">
+				<p>Thank you. It is really helpful.</p>
+<span class="reply-container"><a rel='nofollow' class='comment-reply-link' href='#comment-38713' data-commentid="38713" data-postid="3759" data-belowelement="comment-38713" data-respondelement="respond" data-replyto="Reply to Lovin Kumar" aria-label='Reply to Lovin Kumar'>Reply</a></span>				</div> <!-- end comment-content-->
+			</div> <!-- end comment_area-->
+		</article> <!-- .comment-body -->
+		</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-49643">
+		<article id="comment-49643" class="comment-body clearfix">
+			<div class="comment_avatar">
+								</div>
+
+			<div class="comment_postinfo">
+					<span class="fn">Dennis mcDennis</span>				<span class="comment_date">
+					on January 1, 2020 at 5:14 AM				</span>
+												</div> <!-- .comment_postinfo -->
+
+			<div class="comment_area">
+				
+				<div class="comment-content clearfix">
+				<p>thanks. Very informative.</p>
+<span class="reply-container"><a rel='nofollow' class='comment-reply-link' href='#comment-49643' data-commentid="49643" data-postid="3759" data-belowelement="comment-49643" data-respondelement="respond" data-replyto="Reply to Dennis mcDennis" aria-label='Reply to Dennis mcDennis'>Reply</a></span>				</div> <!-- end comment-content-->
+			</div> <!-- end comment_area-->
+		</article> <!-- .comment-body -->
+		</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-50085">
+		<article id="comment-50085" class="comment-body clearfix">
+			<div class="comment_avatar">
+								</div>
+
+			<div class="comment_postinfo">
+					<span class="fn">James</span>				<span class="comment_date">
+					on January 18, 2020 at 10:09 AM				</span>
+												</div> <!-- .comment_postinfo -->
+
+			<div class="comment_area">
+				
+				<div class="comment-content clearfix">
+				<p>Thank you for such a detailed explanation and comparison. Very helpful!</p>
+<span class="reply-container"><a rel='nofollow' class='comment-reply-link' href='#comment-50085' data-commentid="50085" data-postid="3759" data-belowelement="comment-50085" data-respondelement="respond" data-replyto="Reply to James" aria-label='Reply to James'>Reply</a></span>				</div> <!-- end comment-content-->
+			</div> <!-- end comment_area-->
+		</article> <!-- .comment-body -->
+		<ul class="children">
+	<li class="comment byuser comment-author-sharpsight_admin bypostauthor odd alt depth-2" id="li-comment-50088">
+		<article id="comment-50088" class="comment-body clearfix">
+			<div class="comment_avatar">
+								</div>
+
+			<div class="comment_postinfo">
+					<span class="fn">Sharp Sight</span>				<span class="comment_date">
+					on January 18, 2020 at 1:11 PM				</span>
+												</div> <!-- .comment_postinfo -->
+
+			<div class="comment_area">
+				
+				<div class="comment-content clearfix">
+				<p>You&#8217;re welcome.</p>
+<span class="reply-container"><a rel='nofollow' class='comment-reply-link' href='#comment-50088' data-commentid="50088" data-postid="3759" data-belowelement="comment-50088" data-respondelement="respond" data-replyto="Reply to Sharp Sight" aria-label='Reply to Sharp Sight'>Reply</a></span>				</div> <!-- end comment-content-->
+			</div> <!-- end comment_area-->
+		</article> <!-- .comment-body -->
+		<ul class="children">
+	<li class="comment even depth-3" id="li-comment-56273">
+		<article id="comment-56273" class="comment-body clearfix">
+			<div class="comment_avatar">
+								</div>
+
+			<div class="comment_postinfo">
+					<span class="fn">Aashish Porwal</span>				<span class="comment_date">
+					on November 28, 2020 at 6:21 AM				</span>
+												</div> <!-- .comment_postinfo -->
+
+			<div class="comment_area">
+				
+				<div class="comment-content clearfix">
+				<p>I wanna know if we have to find the no between given numbers mannualy, how can we do it???</p>
+<span class="reply-container"><a rel='nofollow' class='comment-reply-link' href='#comment-56273' data-commentid="56273" data-postid="3759" data-belowelement="comment-56273" data-respondelement="respond" data-replyto="Reply to Aashish Porwal" aria-label='Reply to Aashish Porwal'>Reply</a></span>				</div> <!-- end comment-content-->
+			</div> <!-- end comment_area-->
+		</article> <!-- .comment-body -->
+		<ul class="children">
+	<li class="comment byuser comment-author-sharpsight_admin bypostauthor odd alt depth-4" id="li-comment-56276">
+		<article id="comment-56276" class="comment-body clearfix">
+			<div class="comment_avatar">
+								</div>
+
+			<div class="comment_postinfo">
+					<span class="fn">Joshua Ebner</span>				<span class="comment_date">
+					on November 28, 2020 at 2:53 PM				</span>
+												</div> <!-- .comment_postinfo -->
+
+			<div class="comment_area">
+				
+				<div class="comment-content clearfix">
+				<p>I don&#8217;t understand what you&#8217;re asking.  </p>
+<p>If you have a serious question, you need to ask your question in a clear way.</p>
+<span class="reply-container"><a rel='nofollow' class='comment-reply-link' href='#comment-56276' data-commentid="56276" data-postid="3759" data-belowelement="comment-56276" data-respondelement="respond" data-replyto="Reply to Joshua Ebner" aria-label='Reply to Joshua Ebner'>Reply</a></span>				</div> <!-- end comment-content-->
+			</div> <!-- end comment_area-->
+		</article> <!-- .comment-body -->
+		</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+	<li class="comment even thread-odd thread-alt depth-1" id="li-comment-50360">
+		<article id="comment-50360" class="comment-body clearfix">
+			<div class="comment_avatar">
+								</div>
+
+			<div class="comment_postinfo">
+					<span class="fn"><a href='http://www.knowledgeguru4u.com/' rel='external nofollow ugc' class='url'>dipen thakrar</a></span>				<span class="comment_date">
+					on February 6, 2020 at 4:30 AM				</span>
+												</div> <!-- .comment_postinfo -->
+
+			<div class="comment_area">
+				
+				<div class="comment-content clearfix">
+				<p>It is really helpful. thanks</p>
+<span class="reply-container"><a rel='nofollow' class='comment-reply-link' href='#comment-50360' data-commentid="50360" data-postid="3759" data-belowelement="comment-50360" data-respondelement="respond" data-replyto="Reply to dipen thakrar" aria-label='Reply to dipen thakrar'>Reply</a></span>				</div> <!-- end comment-content-->
+			</div> <!-- end comment_area-->
+		</article> <!-- .comment-body -->
+		</li><!-- #comment-## -->
+	<li class="comment odd alt thread-even depth-1" id="li-comment-51010">
+		<article id="comment-51010" class="comment-body clearfix">
+			<div class="comment_avatar">
+								</div>
+
+			<div class="comment_postinfo">
+					<span class="fn">Bhanuprakash</span>				<span class="comment_date">
+					on March 11, 2020 at 7:14 AM				</span>
+												</div> <!-- .comment_postinfo -->
+
+			<div class="comment_area">
+				
+				<div class="comment-content clearfix">
+				<p>Excellent</p>
+<span class="reply-container"><a rel='nofollow' class='comment-reply-link' href='#comment-51010' data-commentid="51010" data-postid="3759" data-belowelement="comment-51010" data-respondelement="respond" data-replyto="Reply to Bhanuprakash" aria-label='Reply to Bhanuprakash'>Reply</a></span>				</div> <!-- end comment-content-->
+			</div> <!-- end comment_area-->
+		</article> <!-- .comment-body -->
+		</li><!-- #comment-## -->
+	<li class="comment even thread-odd thread-alt depth-1" id="li-comment-51407">
+		<article id="comment-51407" class="comment-body clearfix">
+			<div class="comment_avatar">
+								</div>
+
+			<div class="comment_postinfo">
+					<span class="fn">Rog</span>				<span class="comment_date">
+					on March 30, 2020 at 2:26 AM				</span>
+												</div> <!-- .comment_postinfo -->
+
+			<div class="comment_area">
+				
+				<div class="comment-content clearfix">
+				<p>Awesome article, thanks!</p>
+<span class="reply-container"><a rel='nofollow' class='comment-reply-link' href='#comment-51407' data-commentid="51407" data-postid="3759" data-belowelement="comment-51407" data-respondelement="respond" data-replyto="Reply to Rog" aria-label='Reply to Rog'>Reply</a></span>				</div> <!-- end comment-content-->
+			</div> <!-- end comment_area-->
+		</article> <!-- .comment-body -->
+		<ul class="children">
+	<li class="comment odd alt depth-2" id="li-comment-55083">
+		<article id="comment-55083" class="comment-body clearfix">
+			<div class="comment_avatar">
+								</div>
+
+			<div class="comment_postinfo">
+					<span class="fn">Jemoh</span>				<span class="comment_date">
+					on September 23, 2020 at 10:37 PM				</span>
+												</div> <!-- .comment_postinfo -->
+
+			<div class="comment_area">
+				
+				<div class="comment-content clearfix">
+				<p>Shukran</p>
+<span class="reply-container"><a rel='nofollow' class='comment-reply-link' href='#comment-55083' data-commentid="55083" data-postid="3759" data-belowelement="comment-55083" data-respondelement="respond" data-replyto="Reply to Jemoh" aria-label='Reply to Jemoh'>Reply</a></span>				</div> <!-- end comment-content-->
+			</div> <!-- end comment_area-->
+		</article> <!-- .comment-body -->
+		</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-52899">
+		<article id="comment-52899" class="comment-body clearfix">
+			<div class="comment_avatar">
+								</div>
+
+			<div class="comment_postinfo">
+					<span class="fn">Jaber</span>				<span class="comment_date">
+					on June 6, 2020 at 12:39 PM				</span>
+												</div> <!-- .comment_postinfo -->
+
+			<div class="comment_area">
+				
+				<div class="comment-content clearfix">
+				<p>Nice Explanation. Thank you</p>
+<span class="reply-container"><a rel='nofollow' class='comment-reply-link' href='#comment-52899' data-commentid="52899" data-postid="3759" data-belowelement="comment-52899" data-respondelement="respond" data-replyto="Reply to Jaber" aria-label='Reply to Jaber'>Reply</a></span>				</div> <!-- end comment-content-->
+			</div> <!-- end comment_area-->
+		</article> <!-- .comment-body -->
+		</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-53149">
+		<article id="comment-53149" class="comment-body clearfix">
+			<div class="comment_avatar">
+								</div>
+
+			<div class="comment_postinfo">
+					<span class="fn">Edwin</span>				<span class="comment_date">
+					on June 19, 2020 at 10:37 AM				</span>
+												</div> <!-- .comment_postinfo -->
+
+			<div class="comment_area">
+				
+				<div class="comment-content clearfix">
+				<p>very simply explained that even a dummy will understand. i hope other topics will be explained like this one<br />
+E</p>
+<span class="reply-container"><a rel='nofollow' class='comment-reply-link' href='#comment-53149' data-commentid="53149" data-postid="3759" data-belowelement="comment-53149" data-respondelement="respond" data-replyto="Reply to Edwin" aria-label='Reply to Edwin'>Reply</a></span>				</div> <!-- end comment-content-->
+			</div> <!-- end comment_area-->
+		</article> <!-- .comment-body -->
+		</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-53339">
+		<article id="comment-53339" class="comment-body clearfix">
+			<div class="comment_avatar">
+								</div>
+
+			<div class="comment_postinfo">
+					<span class="fn">Ron</span>				<span class="comment_date">
+					on June 28, 2020 at 9:50 AM				</span>
+												</div> <!-- .comment_postinfo -->
+
+			<div class="comment_area">
+				
+				<div class="comment-content clearfix">
+				<p>Good explanation. I noticed that when creating a unit circle np.arange() did not close the circle while linspace() did. So probably in plotting linspace() is the way to go.</p>
+<span class="reply-container"><a rel='nofollow' class='comment-reply-link' href='#comment-53339' data-commentid="53339" data-postid="3759" data-belowelement="comment-53339" data-respondelement="respond" data-replyto="Reply to Ron" aria-label='Reply to Ron'>Reply</a></span>				</div> <!-- end comment-content-->
+			</div> <!-- end comment_area-->
+		</article> <!-- .comment-body -->
+		<ul class="children">
+	<li class="comment byuser comment-author-sharpsight_admin bypostauthor odd alt depth-2" id="li-comment-53373">
+		<article id="comment-53373" class="comment-body clearfix">
+			<div class="comment_avatar">
+								</div>
+
+			<div class="comment_postinfo">
+					<span class="fn">Sharp Sight</span>				<span class="comment_date">
+					on June 30, 2020 at 5:12 PM				</span>
+												</div> <!-- .comment_postinfo -->
+
+			<div class="comment_area">
+				
+				<div class="comment-content clearfix">
+				<p>Which one you use depends on the application</p>
+<span class="reply-container"><a rel='nofollow' class='comment-reply-link' href='#comment-53373' data-commentid="53373" data-postid="3759" data-belowelement="comment-53373" data-respondelement="respond" data-replyto="Reply to Sharp Sight" aria-label='Reply to Sharp Sight'>Reply</a></span>				</div> <!-- end comment-content-->
+			</div> <!-- end comment_area-->
+		</article> <!-- .comment-body -->
+		</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+	<li class="comment even thread-odd thread-alt depth-1" id="li-comment-53425">
+		<article id="comment-53425" class="comment-body clearfix">
+			<div class="comment_avatar">
+								</div>
+
+			<div class="comment_postinfo">
+					<span class="fn">Hem Pathak</span>				<span class="comment_date">
+					on July 3, 2020 at 10:21 AM				</span>
+												</div> <!-- .comment_postinfo -->
+
+			<div class="comment_area">
+				
+				<div class="comment-content clearfix">
+				<p>Excellent,very helpful for us.</p>
+<span class="reply-container"><a rel='nofollow' class='comment-reply-link' href='#comment-53425' data-commentid="53425" data-postid="3759" data-belowelement="comment-53425" data-respondelement="respond" data-replyto="Reply to Hem Pathak" aria-label='Reply to Hem Pathak'>Reply</a></span>				</div> <!-- end comment-content-->
+			</div> <!-- end comment_area-->
+		</article> <!-- .comment-body -->
+		</li><!-- #comment-## -->
+			</ol>
+		
+		
+							<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title"><span>Submit a Comment</span> <small><a rel="nofollow" id="cancel-comment-reply-link" href="/blog/numpy-linspace/#respond" style="display:none;">Cancel reply</a></small></h3><form action="https://www.sharpsightlabs.com/wp-comments-post.php?wpe-comment-post=sharpsightlabs" method="post" id="commentform" class="comment-form"><p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p><p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea></p><p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" required='required' /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" maxlength="100" aria-describedby="email-notes" required='required' /></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="text" value="" size="30" maxlength="200" /></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit et_pb_button" value="Submit Comment" /> <input type='hidden' name='comment_post_ID' value='3759' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="ab7679f175" /></p><p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="64"/></p></form>	</div><!-- #respond -->
+		</section>					</div> <!-- .et_post_meta_wrapper -->
+				</article> <!-- .et_pb_post -->
+
+						</div> <!-- #left-area -->
+
+				<div id="sidebar">
+		<div id="bloomwidget-2" class="et_pb_widget widget_bloomwidget">
+				<div class='et_bloom_widget_content et_bloom_make_form_visible et_bloom_optin et_bloom_optin_8' style='display: none;'>
+					<style type="text/css">.et_bloom .et_bloom_optin_8 .et_bloom_form_content { background-color: #ededed !important; } .et_bloom .et_bloom_optin_8 .et_bloom_form_container .et_bloom_form_header { background-color: #3a3b3f !important; } .et_bloom .et_bloom_optin_8 .et_bloom_form_content button { background-color: #38b5d0 !important; } .et_bloom .et_bloom_optin_8 .et_bloom_form_content .et_bloom_fields i { color: #38b5d0 !important; } .et_bloom .et_bloom_optin_8 .et_bloom_form_content .et_bloom_custom_field_radio i:before { background: #38b5d0 !important; } .et_bloom .et_bloom_optin_8 .et_bloom_form_content button { background-color: #38b5d0 !important; } .et_bloom .et_bloom_optin_8 .et_bloom_form_container h2, .et_bloom .et_bloom_optin_8 .et_bloom_form_container h2 span, .et_bloom .et_bloom_optin_8 .et_bloom_form_container h2 strong { font-family: "Ubuntu", Helvetica, Arial, Lucida, sans-serif; }.et_bloom .et_bloom_optin_8 .et_bloom_form_container p, .et_bloom .et_bloom_optin_8 .et_bloom_form_container p span, .et_bloom .et_bloom_optin_8 .et_bloom_form_container p strong, .et_bloom .et_bloom_optin_8 .et_bloom_form_container form input, .et_bloom .et_bloom_optin_8 .et_bloom_form_container form button span { font-family: "Open Sans", Helvetica, Arial, Lucida, sans-serif; } </style>
+					<div class='et_bloom_form_container et_bloom_form_text_dark'>
+						
+			<div class="et_bloom_form_container_wrapper clearfix">
+				<div class="et_bloom_header_outer">
+					<div class="et_bloom_form_header et_bloom_header_text_light">
+						
+						<div class="et_bloom_form_text">
+						<h2 style="text-align: left;">Get our FREE<br />Python Data Science Crash Course</h2><p>In the Crash Course, you'll learn:</p>
+<p> </p>
+<p>– Why Python is better than R for data science</p>
+<p>– A step-by-step learning plan</p>
+<p>– The five modules that you need to master</p>
+<p>– The 2 skills you should focus on first</p>
+<p>– How to become "fluent" in Python</p>
+<p>– The real prerequisite for machine learning</p>
+<p>– And more ...</p>
+<p> </p>
+<p>Enter your email and get the Crash Course NOW:</p>
+					</div>
+						
+					</div>
+				</div>
+				<div class="et_bloom_form_content et_bloom_1_field et_bloom_bottom_stacked">
+					
+					
+					<form method="post" class="clearfix">
+						<div class="et_bloom_fields">
+							
+							<p class="et_bloom_popup_input et_bloom_subscribe_email">
+								<input placeholder="Enter your email address">
+							</p>
+							
+							<button data-optin_id="optin_8" data-service="aweber" data-list_id="3573443" data-page_id="3759" data-account="josh@sharpsightlabs.com" data-ip_address="true" class="et_bloom_submit_subscription">
+								<span class="et_bloom_subscribe_loader"></span>
+								<span class="et_bloom_button_text et_bloom_button_text_color_light">Send me the Crash Course!</span>
+							</button>
+						</div>
+					</form>
+					<div class="et_bloom_success_container">
+						<span class="et_bloom_success_checkmark"></span>
+					</div>
+					<h2 class="et_bloom_success_message">Check your email to confirm your subscription</h2>
+					
+				</div>
+			</div>
+			<span class="et_bloom_close_button"></span>
+					</div>
+				</div></div> <!-- end .et_pb_widget -->	</div> <!-- end #sidebar -->
+		</div> <!-- #content-area -->
+	</div> <!-- .container -->
+	</div> <!-- #main-content -->
+
+
+			<footer id="main-footer">
+				
+
+		
+				<div id="footer-bottom">
+					<div class="container clearfix">
+				<ul class="et-social-icons">
+
+	<li class="et-social-icon et-social-facebook">
+		<a href="#" class="icon">
+			<span>Facebook</span>
+		</a>
+	</li>
+	<li class="et-social-icon et-social-twitter">
+		<a href="#" class="icon">
+			<span>Twitter</span>
+		</a>
+	</li>
+	<li class="et-social-icon et-social-google-plus">
+		<a href="#" class="icon">
+			<span>Google</span>
+		</a>
+	</li>
+	<li class="et-social-icon et-social-rss">
+		<a href="https://www.sharpsightlabs.com/feed/" class="icon">
+			<span>RSS</span>
+		</a>
+	</li>
+
+</ul><div id="footer-info">© Sharp Sight, Inc., 2019.  All rights reserved.</div>					</div>	<!-- .container -->
+				</div>
+			</footer> <!-- #main-footer -->
+		</div> <!-- #et-main-area -->
+
+
+	</div> <!-- #page-container -->
+
+	<!-- This site is converting visitors into subscribers and customers with OptinMonster - https://optinmonster.com :: Campaign Title: Python data science crash course, 30 seconds [Popup] --><script data-rocketlazyloadscript='data:text/javascript;base64,KGZ1bmN0aW9uKGQpe3ZhciBzPWQuY3JlYXRlRWxlbWVudCgnc2NyaXB0Jyk7cy50eXBlPSd0ZXh0L2phdmFzY3JpcHQnO3Muc3JjPSdodHRwczovL2Eub21hcHBhcGkuY29tL2FwcC9qcy9hcGkubWluLmpzJztzLmFzeW5jPXRydWU7cy5kYXRhc2V0LmNhbXBhaWduPSdubGJ3ZncxYW84dnV0aGRnbXBheSc7cy5kYXRhc2V0LnVzZXI9Jzk4OTYnO2QuZ2V0RWxlbWVudHNCeVRhZ05hbWUoJ2hlYWQnKVswXS5hcHBlbmRDaGlsZChzKTt9KShkb2N1bWVudCk7' ></script><!-- / OptinMonster --><!-- This site is converting visitors into subscribers and customers with OptinMonster - https://optinmonster.com :: Campaign Title: Python data science crash course, 60 second [Popup] --><script data-rocketlazyloadscript='data:text/javascript;base64,KGZ1bmN0aW9uKGQpe3ZhciBzPWQuY3JlYXRlRWxlbWVudCgnc2NyaXB0Jyk7cy50eXBlPSd0ZXh0L2phdmFzY3JpcHQnO3Muc3JjPSdodHRwczovL2Eub21hcHBhcGkuY29tL2FwcC9qcy9hcGkubWluLmpzJztzLmFzeW5jPXRydWU7cy5kYXRhc2V0LmNhbXBhaWduPSdid2E3NHB0Y2RxZTR0bWY0YmJsZic7cy5kYXRhc2V0LnVzZXI9Jzk4OTYnO2QuZ2V0RWxlbWVudHNCeVRhZ05hbWUoJ2hlYWQnKVswXS5hcHBlbmRDaGlsZChzKTt9KShkb2N1bWVudCk7' ></script><!-- / OptinMonster --><!-- This site is converting visitors into subscribers and customers with OptinMonster - https://optinmonster.com :: Campaign Title: Right side slide-in: Get data science tutorials --><script data-rocketlazyloadscript='data:text/javascript;base64,KGZ1bmN0aW9uKGQpe3ZhciBzPWQuY3JlYXRlRWxlbWVudCgnc2NyaXB0Jyk7cy50eXBlPSd0ZXh0L2phdmFzY3JpcHQnO3Muc3JjPSdodHRwczovL2Eub21hcHBhcGkuY29tL2FwcC9qcy9hcGkubWluLmpzJztzLmFzeW5jPXRydWU7cy5kYXRhc2V0LmNhbXBhaWduPSdvcTdycGFvbnJyeXZhd2ljMmd5NSc7cy5kYXRhc2V0LnVzZXI9Jzk4OTYnO2QuZ2V0RWxlbWVudHNCeVRhZ05hbWUoJ2hlYWQnKVswXS5hcHBlbmRDaGlsZChzKTt9KShkb2N1bWVudCk7' ></script><!-- / OptinMonster -->		<script type="text/javascript">
+		var nlbwfw1ao8vuthdgmpay_shortcode = true;var bwa74ptcdqe4tmf4bblf_shortcode = true;var oq7rpaonrryvawic2gy5_shortcode = true;		</script>
+		
+
+
+<script type='text/javascript' id='code-prettify-js-extra'>
+/* <![CDATA[ */
+var codePrettifyLoaderBaseUrl = "https:\/\/www.sharpsightlabs.com\/wp-content\/plugins\/code-prettify\/prettify";
+/* ]]> */
+</script>
+<script data-minify="1" type='text/javascript' src='https://vrzkj25a871bpq7t1ugcgmn9-wpengine.netdna-ssl.com/wp-content/cache/min/1/wp-content/plugins/code-prettify/prettify/run_prettify-cd28d839a9313789e520be26b6dfc13e.js' id='code-prettify-js' defer></script>
+<script type='text/javascript' id='spai-scripts-js-extra'>
+/* <![CDATA[ */
+var spai_settings = {"api_url":"https:\/\/cdn.shortpixel.ai\/spai\/w_%WIDTH%+q_lossy+ret_img","api_short_url":"https:\/\/cdn.shortpixel.ai\/spai\/ret_img","method":"src","crop":"","native_lazy":"","serve_svg":"1","hover_handling":"","debug":"","site_url":"https:\/\/www.sharpsightlabs.com","plugin_url":"https:\/\/www.sharpsightlabs.com\/wp-content\/plugins\/shortpixel-adaptive-images","version":"2.0.10","excluded_selectors":[],"eager_selectors":[],"noresize_selectors":[],"excluded_paths":["cmVnZXg6L1wvXC8oW15cL10qXC58KWdyYXZhdGFyLmNvbVwvLw=="],"parse_css_files":"","backgrounds_max_width":"1920","sep":"+","webp":"1","extensions_to_webp":{"png":true,"jpg":true,"gif":true},"sniper":"https:\/\/www.sharpsightlabs.com\/wp-content\/plugins\/shortpixel-adaptive-images\/img\/target.cur","affected_tags":"{\"script\":2}","ajax_url":"https:\/\/www.sharpsightlabs.com\/wp-admin\/admin-ajax.php","active_integrations":{"nextgen":false,"modula":false,"elementor":false,"elementor-addons":false,"viba-portfolio":false,"envira":false,"everest":false,"wp-bakery":false,"woocommerce":false,"foo":false,"oxygen":false,"slider-revolution":false,"smart-slider":false,"wp-grid-builder":false,"the-grid":false,"social-pug":false,"content-views":false,"wp-rocket":{"lazyload":false,"css-filter":true,"minify-css":true,"defer-all-js":false},"swift-performance":false,"imagify":{"active":false},"wp-fastest-cache":false,"w3-total-cache":false,"wp-optimize":false,"theme":"Divi"}};
+/* ]]> */
+</script>
+<script data-cfasync="false" type='text/javascript' src='https://vrzkj25a871bpq7t1ugcgmn9-wpengine.netdna-ssl.com/wp-content/plugins/shortpixel-adaptive-images/assets/js/ai.min.js?ver=2.0.10' id='spai-scripts-js'></script>
+<script type='text/javascript' id='rocket-browser-checker-js-after'>
+"use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+</script>
+<script type='text/javascript' id='rocket-delay-js-js-after'>
+(function() {
+"use strict";var e=function(){function n(e,t){for(var r=0;r<t.length;r++){var n=t[r];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}return function(e,t,r){return t&&n(e.prototype,t),r&&n(e,r),e}}();function n(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function r(e,t){n(this,r),this.attrName="data-rocketlazyloadscript",this.browser=t,this.options=this.browser.options,this.triggerEvents=e,this.userEventListener=this.triggerListener.bind(this)}return e(r,[{key:"init",value:function(){this._addEventListener(this)}},{key:"reset",value:function(){this._removeEventListener(this)}},{key:"_addEventListener",value:function(t){this.triggerEvents.forEach(function(e){return window.addEventListener(e,t.userEventListener,t.options)})}},{key:"_removeEventListener",value:function(t){this.triggerEvents.forEach(function(e){return window.removeEventListener(e,t.userEventListener,t.options)})}},{key:"_loadScriptSrc",value:function(){var r=this,e=document.querySelectorAll("script["+this.attrName+"]");0!==e.length&&Array.prototype.slice.call(e).forEach(function(e){var t=e.getAttribute(r.attrName);e.setAttribute("src",t),e.removeAttribute(r.attrName)}),this.reset()}},{key:"triggerListener",value:function(){this._loadScriptSrc(),this._removeEventListener(this)}}],[{key:"run",value:function(){RocketBrowserCompatibilityChecker&&new r(["keydown","mouseover","touchmove","touchstart"],new RocketBrowserCompatibilityChecker({passive:!0})).init()}}]),r}();t.run();
+}());
+</script>
+<script type='text/javascript' src='https://vrzkj25a871bpq7t1ugcgmn9-wpengine.netdna-ssl.com/wp-includes/js/comment-reply.min.js?ver=5.5.3' id='comment-reply-js' defer></script>
+<script type='text/javascript' id='divi-custom-script-js-extra'>
+/* <![CDATA[ */
+var DIVI = {"item_count":"%d Item","items_count":"%d Items"};
+var et_shortcodes_strings = {"previous":"Previous","next":"Next"};
+var et_pb_custom = {"ajaxurl":"https:\/\/www.sharpsightlabs.com\/wp-admin\/admin-ajax.php","images_uri":"https:\/\/www.sharpsightlabs.com\/wp-content\/themes\/Divi\/images","builder_images_uri":"https:\/\/www.sharpsightlabs.com\/wp-content\/themes\/Divi\/includes\/builder\/images","et_frontend_nonce":"793b519fb6","subscription_failed":"Please, check the fields below to make sure you entered the correct information.","et_ab_log_nonce":"81637ad3e9","fill_message":"Please, fill in the following fields:","contact_error_message":"Please, fix the following errors:","invalid":"Invalid email","captcha":"Captcha","prev":"Prev","previous":"Previous","next":"Next","wrong_captcha":"You entered the wrong number in captcha.","wrong_checkbox":"Checkbox","ignore_waypoints":"no","is_divi_theme_used":"1","widget_search_selector":".widget_search","ab_tests":[],"is_ab_testing_active":"","page_id":"3759","unique_test_id":"","ab_bounce_rate":"5","is_cache_plugin_active":"yes","is_shortcode_tracking":"","tinymce_uri":""}; var et_builder_utils_params = {"condition":{"diviTheme":true,"extraTheme":false},"scrollLocations":["app","top"],"builderScrollLocations":{"desktop":"app","tablet":"app","phone":"app"},"onloadScrollLocation":"app","builderType":"fe"}; var et_frontend_scripts = {"builderCssContainerPrefix":"#et-boc","builderCssLayoutPrefix":"#et-boc .et-l"};
+var et_pb_box_shadow_elements = [];
+var et_pb_motion_elements = {"desktop":[],"tablet":[],"phone":[]};
+var et_pb_sticky_elements = [];
+/* ]]> */
+</script>
+<script data-minify="1" type='text/javascript' src='https://vrzkj25a871bpq7t1ugcgmn9-wpengine.netdna-ssl.com/wp-content/cache/min/1/wp-content/themes/Divi/js/custom.unified-a91d90346dd37bf275797c5d8242e4ab.js' id='divi-custom-script-js' defer></script>
+<script data-rocketlazyloadscript='data:text/javascript;base64,KGZ1bmN0aW9uKGQpe3ZhciBzPWQuY3JlYXRlRWxlbWVudCgic2NyaXB0Iik7cy50eXBlPSJ0ZXh0L2phdmFzY3JpcHQiO3Muc3JjPSJodHRwczovL2Eub21hcHBhcGkuY29tL2FwcC9qcy9hcGkubWluLmpzIjtzLmFzeW5jPXRydWU7cy5pZD0ib21hcGktc2NyaXB0IjtkLmdldEVsZW1lbnRzQnlUYWdOYW1lKCJoZWFkIilbMF0uYXBwZW5kQ2hpbGQocyk7fSkoZG9jdW1lbnQpOw==' ></script><script data-minify="1" type='text/javascript' src='https://vrzkj25a871bpq7t1ugcgmn9-wpengine.netdna-ssl.com/wp-content/cache/min/1/wp-content/themes/Divi/core/admin/js/common-797ba01fe39e5ebbedbee488cccce9d1.js' id='et-core-common-js' defer></script>
+<script type='text/javascript' src='https://vrzkj25a871bpq7t1ugcgmn9-wpengine.netdna-ssl.com/wp-includes/js/wp-embed.min.js?ver=5.5.3' id='wp-embed-js' defer></script>
+<script type='text/javascript' src='https://vrzkj25a871bpq7t1ugcgmn9-wpengine.netdna-ssl.com/wp-content/plugins/bloom/js/jquery.uniform.min.js?ver=1.3.11' id='et_bloom-uniform-js-js' defer></script>
+<script type='text/javascript' id='et_bloom-custom-js-js-extra'>
+/* <![CDATA[ */
+var bloomSettings = {"ajaxurl":"https:\/\/www.sharpsightlabs.com\/wp-admin\/admin-ajax.php","pageurl":"https:\/\/www.sharpsightlabs.com\/blog\/numpy-linspace\/","stats_nonce":"f7ef347fb1","subscribe_nonce":"7a3a71a3ca","is_user_logged_in":"not_logged"};
+/* ]]> */
+</script>
+<script data-minify="1" type='text/javascript' src='https://vrzkj25a871bpq7t1ugcgmn9-wpengine.netdna-ssl.com/wp-content/cache/min/1/wp-content/plugins/bloom/js/custom-e80f62bd21c7536fbb0edc119bddffa9.js' id='et_bloom-custom-js-js' defer></script>
+<script type='text/javascript' src='https://vrzkj25a871bpq7t1ugcgmn9-wpengine.netdna-ssl.com/wp-content/plugins/bloom/js/idle-timer.min.js?ver=1.3.11' id='et_bloom-idle-timer-js-js' defer></script>
+<script data-minify="1" async="async" type='text/javascript' src='https://vrzkj25a871bpq7t1ugcgmn9-wpengine.netdna-ssl.com/wp-content/cache/min/1/wp-content/plugins/akismet/_inc/form-b9e83ff895d0464f0f76f99fd50ad790.js' id='akismet-form-js'></script>
+<script data-minify="1" type='text/javascript' src='https://vrzkj25a871bpq7t1ugcgmn9-wpengine.netdna-ssl.com/wp-content/cache/min/1/wp-content/plugins/optinmonster/assets/js/helper-be624e2ae315be6007bc41f3b2c891cb.js' id='optinmonster-wp-helper-js' defer></script>
+		<script type="text/javascript">var omapi_localized = { ajax: 'https://www.sharpsightlabs.com/wp-admin/admin-ajax.php?optin-monster-ajax-route=1', nonce: '25ff18ac50', slugs: {"nlbwfw1ao8vuthdgmpay":{"slug":"nlbwfw1ao8vuthdgmpay","mailpoet":false},"bwa74ptcdqe4tmf4bblf":{"slug":"bwa74ptcdqe4tmf4bblf","mailpoet":false},"oq7rpaonrryvawic2gy5":{"slug":"oq7rpaonrryvawic2gy5","mailpoet":false}} };</script>
+				<script type="text/javascript">var omapi_data = {"wc_cart":[],"object_id":3759,"object_key":"post","object_type":"post","term_ids":[31,55,62,58,35,63,59]};</script>
+		<script>window.lazyLoadOptions={elements_selector:"img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}};window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async src="https://vrzkj25a871bpq7t1ugcgmn9-wpengine.netdna-ssl.com/wp-content/plugins/wp-rocket/assets/js/lazyload/16.1/lazyload.min.js"></script><script>"use strict";var wprRemoveCPCSS=function wprRemoveCPCSS(){var elem;document.querySelector('link[data-rocket-async="style"][rel="preload"]')?setTimeout(wprRemoveCPCSS,200):(elem=document.getElementById("rocket-critical-css"))&&"remove"in elem&&elem.remove()};window.addEventListener?window.addEventListener("load",wprRemoveCPCSS):window.attachEvent&&window.attachEvent("onload",wprRemoveCPCSS);</script><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2Cregular%2Citalic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CPoppins%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2Cregular%2Citalic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CUbuntu%3A400%2C300%2C300italic%2C400italic%2C500%2C500italic%2C700%2C700italic%7COpen%20Sans%3A400%2C700&#038;subset=latin%2Clatin-ext,latin%2Ccyrillic-ext%2Ccyrillic%2Cgreek-ext%2Cgreek%2Clatin-ext&#038;display=swap" /><link rel="stylesheet" href="https://vrzkj25a871bpq7t1ugcgmn9-wpengine.netdna-ssl.com/wp-content/cache/min/1/5466843acacbd73a0071ea38c19c32c2.css" media="all" data-minify="1" /></noscript></body>
+</html>
+
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me -->
