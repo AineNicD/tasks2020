@@ -46,7 +46,7 @@ https://github.com/AineNicD/tasks2020.git
  <strong>Note:</strong>
  Modifications to the notebooks are automatically saved every few minutes. To avoid modifying the original notebook, make a copy of the notebook document (menu File -> Make a copy …) and save the modifications on the copy. </div> 
  
-for mor information on Jupyter notebook visit: [jupyter-notebook-beginner-guide](https://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/what_is_jupyter.html#notebook-app)
+For more information on Jupyter notebook visit: [jupyter-notebook-beginner-guide](https://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/what_is_jupyter.html#notebook-app)
 
 # The four tasks answered in the notebook:  [tasks2020.ipynb](https://github.com/AineNicD/tasks2020/blob/main/tasks2020.ipynb)
 
