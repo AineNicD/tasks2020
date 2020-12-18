@@ -1,8 +1,9 @@
 # tasks2020
-My GMIT Fundamentals of Data Analysis tasks
+GMIT Fundamentals of Data Analysis tasks 
+### Student: Aine Nic Dhonnacha
 
 ## Introduction
-This repository contains four tasks in a single jupyter notebook given in the Fundementals of Data Analysis module in Gmit HDip data analytics. 
+This repository contains four tasks written in [python programming language](https://www.python.org/) in a single jupyter notebook given in the Fundementals of Data Analysis module in Gmit HDip data analytics. 
 
 ### [Jupyter Notebook](https://jupyter.org/)
 -is an open-source web application that allows you to create and share documents that contain live code, equations, visualizations and narrative text. It is best installed with [Anaconda](https://www.anaconda.com/). 
@@ -19,6 +20,35 @@ The Jupyter Notebook App can be launched by clicking on the Jupyter Notebook ico
 - Go to the file location where you saved the tasks2020.ipynb
 - Open file.
 -[Jupyter beginners Guide](https://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/execute.html)
+
+### You can also download this repository:
+
+![](howtodownloadrepository.png)
+
+Click on the green code button at the top right, go to "Clone or download" drop down menu and copy below url:
+https://github.com/AineNicD/tasks2020.git
+ 
+ Open up cmder and run below command to clone the repository locally on your machine:
+ - git clone https://github.com/AineNicD/tasks2020.git
+ 
+![](howtodownloadrepository.png)
+
+### How to execute the notebook
+ - Launch the Jupyter Notebook App.
+ - In the Notebook Dashboard navigate to find the notebook: clicking on its name will open it in a new browser tab.
+ - Click on the menu Help -> User Interface Tour for an overview of the Jupyter Notebook App user interface.
+ - You can run the notebook document step-by-step (one cell a time) by pressing shift + enter.
+ - You can run the whole notebook in a single step by clicking on the menu Cell -> Run All.
+ - To restart the kernel, click on the menu Kernel -> Restart. 
+[Executing a notebook](https://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/execute.html)
+
+<div class="alert alert-info">
+ <strong>Note:</strong>
+ Modifications to the notebooks are automatically saved every few minutes. To avoid modifying the original notebook, make a copy of the notebook document (menu File -> Make a copy …) and save the modifications on the copy. </div> 
+ 
+for mor information on Jupyter notebook visit: [jupyter-notebook-beginner-guide](https://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/what_is_jupyter.html#notebook-app)
+
+# The four tasks answered in the notebook:  [tasks2020.ipynb](https://github.com/AineNicD/tasks2020/blob/main/tasks2020.ipynb)
 
 ## Task 1 : October 5th, 2020:
 ~~~ 
@@ -85,5 +115,11 @@ Tasks are answered in the jupyter notebook below;
 * [Python community](https://www.python.org/community/).
 
 * [Jupyter Notebook](https://jupyter.org/)
+
+* [jupyter-notebook-beginner-guide](https://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/what_is_jupyter.html#notebook-app)
+
+* [Anaconda](https://www.anaconda.com/)
+
+* [CMDER](https://cmder.net/)
 
 
