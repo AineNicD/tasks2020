@@ -23,10 +23,10 @@ The Jupyter Notebook App can be launched by clicking on the Jupyter Notebook ico
 
 ### You can also download this repository:
 
-![](howtodownloadrepository.png)
-
 Click on the green code button at the top right, go to "Clone or download" drop down menu and copy below url:
 https://github.com/AineNicD/tasks2020.git
+
+![](https://github.com/AineNicD/tasks2020/blob/main/images/howtodownloadrepository.png)
  
  Open up cmder and run below command to clone the repository locally on your machine:
  - git clone https://github.com/AineNicD/tasks2020.git
